@@ -32,10 +32,10 @@ namespace Market_final_exam
             this.components = new System.ComponentModel.Container();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.managef = new Market_final_exam.Managef();
             this.pURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.managef = new Market_final_exam.Managef();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.pURCHASETableAdapter = new Market_final_exam.ManagefTableAdapters.PURCHASETableAdapter();
             this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,8 +47,8 @@ namespace Market_final_exam
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managef)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managef)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -72,16 +72,6 @@ namespace Market_final_exam
             this.metroTabPage1.Text = "구매승인";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 36);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(693, 300);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "환불요청승인";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -103,15 +93,25 @@ namespace Market_final_exam
             this.dataGridView1.Size = new System.Drawing.Size(686, 300);
             this.dataGridView1.TabIndex = 2;
             // 
+            // pURCHASEBindingSource
+            // 
+            this.pURCHASEBindingSource.DataMember = "PURCHASE";
+            this.pURCHASEBindingSource.DataSource = this.managef;
+            // 
             // managef
             // 
             this.managef.DataSetName = "Managef";
             this.managef.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pURCHASEBindingSource
+            // metroTabPage2
             // 
-            this.pURCHASEBindingSource.DataMember = "PURCHASE";
-            this.pURCHASEBindingSource.DataSource = this.managef;
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 36);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(693, 300);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "환불요청승인";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
             // 
             // pURCHASETableAdapter
             // 
@@ -150,7 +150,7 @@ namespace Market_final_exam
             this.pPRICEDataGridViewTextBoxColumn.DataPropertyName = "P_PRICE";
             this.pPRICEDataGridViewTextBoxColumn.HeaderText = "가격";
             this.pPRICEDataGridViewTextBoxColumn.Name = "pPRICEDataGridViewTextBoxColumn";
-            this.pPRICEDataGridViewTextBoxColumn.Width = 70;
+            this.pPRICEDataGridViewTextBoxColumn.Width = 80;
             // 
             // pUQUANTDataGridViewTextBoxColumn
             // 
@@ -179,8 +179,8 @@ namespace Market_final_exam
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managef)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managef)).EndInit();
             this.ResumeLayout(false);
 
         }

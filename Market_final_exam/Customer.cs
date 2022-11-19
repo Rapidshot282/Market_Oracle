@@ -192,7 +192,9 @@ namespace Market_final_exam
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Reply showFrom6 = new Reply();
 
+            showFrom6.ShowDialog();
         }
     }
 }
