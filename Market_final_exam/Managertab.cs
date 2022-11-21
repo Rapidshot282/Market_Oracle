@@ -36,6 +36,8 @@ namespace Market_final_exam
 
             this.registerTableAdapter1.Fill(this.rcdata1.REGISTER);
 
+            this.purchaseTableAdapter1.Fill(this.managef.PURCHASE);
+
             marketTableAdapter1.Fill(managef1.MARKET);
             market = managef1.Tables["MARKET"];
 

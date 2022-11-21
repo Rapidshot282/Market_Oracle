@@ -1818,6 +1818,8 @@ namespace Market_final_exam {
             
             private global::System.Data.DataColumn columnPD_SERIAL;
             
+            private global::System.Data.DataColumn columnW_ID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PURCHASEDataTable() {
@@ -1917,6 +1919,14 @@ namespace Market_final_exam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn W_IDColumn {
+                get {
+                    return this.columnW_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1952,7 +1962,7 @@ namespace Market_final_exam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PURCHASERow AddPURCHASERow(string P_ID, string C_ID, MARKETRow parentMARKETRowByPURCHASE_FK2, string PU_QUANT, string P_PRICE, string P_STATE, string P_DATE, PD_DETAILRow parentPD_DETAILRowByPURCHASE_FK3) {
+            public PURCHASERow AddPURCHASERow(string P_ID, string C_ID, MARKETRow parentMARKETRowByPURCHASE_FK2, string PU_QUANT, string P_PRICE, string P_STATE, string P_DATE, PD_DETAILRow parentPD_DETAILRowByPURCHASE_FK3, string W_ID) {
                 PURCHASERow rowPURCHASERow = ((PURCHASERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         P_ID,
@@ -1962,7 +1972,8 @@ namespace Market_final_exam {
                         P_PRICE,
                         P_STATE,
                         P_DATE,
-                        null};
+                        null,
+                        W_ID};
                 if ((parentMARKETRowByPURCHASE_FK2 != null)) {
                     columnValuesArray[2] = parentMARKETRowByPURCHASE_FK2[0];
                 }
@@ -2006,6 +2017,7 @@ namespace Market_final_exam {
                 this.columnP_STATE = base.Columns["P_STATE"];
                 this.columnP_DATE = base.Columns["P_DATE"];
                 this.columnPD_SERIAL = base.Columns["PD_SERIAL"];
+                this.columnW_ID = base.Columns["W_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2027,6 +2039,8 @@ namespace Market_final_exam {
                 base.Columns.Add(this.columnP_DATE);
                 this.columnPD_SERIAL = new global::System.Data.DataColumn("PD_SERIAL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPD_SERIAL);
+                this.columnW_ID = new global::System.Data.DataColumn("W_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnW_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnP_ID}, true));
                 this.columnP_ID.AllowDBNull = false;
@@ -2039,6 +2053,7 @@ namespace Market_final_exam {
                 this.columnP_STATE.MaxLength = 20;
                 this.columnP_DATE.MaxLength = 255;
                 this.columnPD_SERIAL.MaxLength = 20;
+                this.columnW_ID.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4060,6 +4075,22 @@ namespace Market_final_exam {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string W_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tablePURCHASE.W_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'PURCHASE\' 테이블의 \'W_ID\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tablePURCHASE.W_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public MARKETRow MARKETRow {
                 get {
                     return ((MARKETRow)(this.GetParentRow(this.Table.ParentRelations["PURCHASE_FK2"])));
@@ -4162,6 +4193,18 @@ namespace Market_final_exam {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPD_SERIALNull() {
                 this[this.tablePURCHASE.PD_SERIALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsW_IDNull() {
+                return this.IsNull(this.tablePURCHASE.W_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetW_IDNull() {
+                this[this.tablePURCHASE.W_IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7296,10 +7339,11 @@ namespace Market_final_exam.ManagefTableAdapters {
             tableMapping.ColumnMappings.Add("P_STATE", "P_STATE");
             tableMapping.ColumnMappings.Add("P_DATE", "P_DATE");
             tableMapping.ColumnMappings.Add("PD_SERIAL", "PD_SERIAL");
+            tableMapping.ColumnMappings.Add("W_ID", "W_ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""MINSU"".""PURCHASE"" WHERE ((""P_ID"" = :Original_P_ID) AND ((:IsNull_C_ID = 1 AND ""C_ID"" IS NULL) OR (""C_ID"" = :Original_C_ID)) AND ((:IsNull_M_ID = 1 AND ""M_ID"" IS NULL) OR (""M_ID"" = :Original_M_ID)) AND ((:IsNull_PU_QUANT = 1 AND ""PU_QUANT"" IS NULL) OR (""PU_QUANT"" = :Original_PU_QUANT)) AND ((:IsNull_P_PRICE = 1 AND ""P_PRICE"" IS NULL) OR (""P_PRICE"" = :Original_P_PRICE)) AND ((:IsNull_P_STATE = 1 AND ""P_STATE"" IS NULL) OR (""P_STATE"" = :Original_P_STATE)) AND ((:IsNull_P_DATE = 1 AND ""P_DATE"" IS NULL) OR (""P_DATE"" = :Original_P_DATE)) AND ((:IsNull_PD_SERIAL = 1 AND ""PD_SERIAL"" IS NULL) OR (""PD_SERIAL"" = :Original_PD_SERIAL)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""MINSU"".""PURCHASE"" WHERE ((""P_ID"" = :Original_P_ID) AND ((:IsNull_C_ID = 1 AND ""C_ID"" IS NULL) OR (""C_ID"" = :Original_C_ID)) AND ((:IsNull_M_ID = 1 AND ""M_ID"" IS NULL) OR (""M_ID"" = :Original_M_ID)) AND ((:IsNull_PU_QUANT = 1 AND ""PU_QUANT"" IS NULL) OR (""PU_QUANT"" = :Original_PU_QUANT)) AND ((:IsNull_P_PRICE = 1 AND ""P_PRICE"" IS NULL) OR (""P_PRICE"" = :Original_P_PRICE)) AND ((:IsNull_P_STATE = 1 AND ""P_STATE"" IS NULL) OR (""P_STATE"" = :Original_P_STATE)) AND ((:IsNull_P_DATE = 1 AND ""P_DATE"" IS NULL) OR (""P_DATE"" = :Original_P_DATE)) AND ((:IsNull_PD_SERIAL = 1 AND ""PD_SERIAL"" IS NULL) OR (""PD_SERIAL"" = :Original_PD_SERIAL)) AND ((:IsNull_W_ID = 1 AND ""W_ID"" IS NULL) OR (""W_ID"" = :Original_W_ID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_P_ID";
@@ -7435,11 +7479,29 @@ namespace Market_final_exam.ManagefTableAdapters {
             param.SourceColumn = "PD_SERIAL";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_W_ID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "W_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_W_ID";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "W_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO \"MINSU\".\"PURCHASE\" (\"P_ID\", \"C_ID\", \"M_ID\", \"PU_QUANT\", \"P_PRICE\", \"P" +
-                "_STATE\", \"P_DATE\", \"PD_SERIAL\") VALUES (:P_ID, :C_ID, :M_ID, :PU_QUANT, :P_PRICE" +
-                ", :P_STATE, :P_DATE, :PD_SERIAL)";
+                "_STATE\", \"P_DATE\", \"PD_SERIAL\", \"W_ID\") VALUES (:P_ID, :C_ID, :M_ID, :PU_QUANT, " +
+                ":P_PRICE, :P_STATE, :P_DATE, :PD_SERIAL, :W_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "P_ID";
@@ -7497,9 +7559,16 @@ namespace Market_final_exam.ManagefTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "PD_SERIAL";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "W_ID";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "W_ID";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""MINSU"".""PURCHASE"" SET ""P_ID"" = :P_ID, ""C_ID"" = :C_ID, ""M_ID"" = :M_ID, ""PU_QUANT"" = :PU_QUANT, ""P_PRICE"" = :P_PRICE, ""P_STATE"" = :P_STATE, ""P_DATE"" = :P_DATE, ""PD_SERIAL"" = :PD_SERIAL WHERE ((""P_ID"" = :Original_P_ID) AND ((:IsNull_C_ID = 1 AND ""C_ID"" IS NULL) OR (""C_ID"" = :Original_C_ID)) AND ((:IsNull_M_ID = 1 AND ""M_ID"" IS NULL) OR (""M_ID"" = :Original_M_ID)) AND ((:IsNull_PU_QUANT = 1 AND ""PU_QUANT"" IS NULL) OR (""PU_QUANT"" = :Original_PU_QUANT)) AND ((:IsNull_P_PRICE = 1 AND ""P_PRICE"" IS NULL) OR (""P_PRICE"" = :Original_P_PRICE)) AND ((:IsNull_P_STATE = 1 AND ""P_STATE"" IS NULL) OR (""P_STATE"" = :Original_P_STATE)) AND ((:IsNull_P_DATE = 1 AND ""P_DATE"" IS NULL) OR (""P_DATE"" = :Original_P_DATE)) AND ((:IsNull_PD_SERIAL = 1 AND ""PD_SERIAL"" IS NULL) OR (""PD_SERIAL"" = :Original_PD_SERIAL)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""MINSU"".""PURCHASE"" SET ""P_ID"" = :P_ID, ""C_ID"" = :C_ID, ""M_ID"" = :M_ID, ""PU_QUANT"" = :PU_QUANT, ""P_PRICE"" = :P_PRICE, ""P_STATE"" = :P_STATE, ""P_DATE"" = :P_DATE, ""PD_SERIAL"" = :PD_SERIAL, ""W_ID"" = :W_ID WHERE ((""P_ID"" = :Original_P_ID) AND ((:IsNull_C_ID = 1 AND ""C_ID"" IS NULL) OR (""C_ID"" = :Original_C_ID)) AND ((:IsNull_M_ID = 1 AND ""M_ID"" IS NULL) OR (""M_ID"" = :Original_M_ID)) AND ((:IsNull_PU_QUANT = 1 AND ""PU_QUANT"" IS NULL) OR (""PU_QUANT"" = :Original_PU_QUANT)) AND ((:IsNull_P_PRICE = 1 AND ""P_PRICE"" IS NULL) OR (""P_PRICE"" = :Original_P_PRICE)) AND ((:IsNull_P_STATE = 1 AND ""P_STATE"" IS NULL) OR (""P_STATE"" = :Original_P_STATE)) AND ((:IsNull_P_DATE = 1 AND ""P_DATE"" IS NULL) OR (""P_DATE"" = :Original_P_DATE)) AND ((:IsNull_PD_SERIAL = 1 AND ""PD_SERIAL"" IS NULL) OR (""PD_SERIAL"" = :Original_PD_SERIAL)) AND ((:IsNull_W_ID = 1 AND ""W_ID"" IS NULL) OR (""W_ID"" = :Original_W_ID)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "P_ID";
@@ -7556,6 +7625,13 @@ namespace Market_final_exam.ManagefTableAdapters {
             param.Size = 20;
             param.IsNullable = true;
             param.SourceColumn = "PD_SERIAL";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "W_ID";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "W_ID";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_P_ID";
@@ -7691,6 +7767,24 @@ namespace Market_final_exam.ManagefTableAdapters {
             param.SourceColumn = "PD_SERIAL";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "IsNull_W_ID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Int32;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "W_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "Original_W_ID";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 20;
+            param.IsNullable = true;
+            param.SourceColumn = "W_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7706,8 +7800,8 @@ namespace Market_final_exam.ManagefTableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[2];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT P_ID, C_ID, M_ID, PU_QUANT, P_PRICE, P_STATE, P_DATE, PD_SERIAL FROM MINSU" +
-                ".PURCHASE";
+            this._commandCollection[0].CommandText = "SELECT P_ID, C_ID, M_ID, PU_QUANT, P_PRICE, P_STATE, P_DATE, PD_SERIAL, W_ID FROM" +
+                " MINSU.PURCHASE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -7772,7 +7866,7 @@ namespace Market_final_exam.ManagefTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_P_ID, string Original_C_ID, string Original_M_ID, string Original_PU_QUANT, string Original_P_PRICE, string Original_P_STATE, string Original_P_DATE, string Original_PD_SERIAL) {
+        public virtual int Delete(string Original_P_ID, string Original_C_ID, string Original_M_ID, string Original_PU_QUANT, string Original_P_PRICE, string Original_P_STATE, string Original_P_DATE, string Original_PD_SERIAL, string Original_W_ID) {
             if ((Original_P_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_P_ID");
             }
@@ -7835,6 +7929,14 @@ namespace Market_final_exam.ManagefTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_PD_SERIAL));
             }
+            if ((Original_W_ID == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_W_ID));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7855,7 +7957,7 @@ namespace Market_final_exam.ManagefTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string P_ID, string C_ID, string M_ID, string PU_QUANT, string P_PRICE, string P_STATE, string P_DATE, string PD_SERIAL) {
+        public virtual int Insert(string P_ID, string C_ID, string M_ID, string PU_QUANT, string P_PRICE, string P_STATE, string P_DATE, string PD_SERIAL, string W_ID) {
             if ((P_ID == null)) {
                 throw new global::System.ArgumentNullException("P_ID");
             }
@@ -7904,6 +8006,12 @@ namespace Market_final_exam.ManagefTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(PD_SERIAL));
             }
+            if ((W_ID == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(W_ID));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7933,6 +8041,7 @@ namespace Market_final_exam.ManagefTableAdapters {
                     string P_STATE, 
                     string P_DATE, 
                     string PD_SERIAL, 
+                    string W_ID, 
                     string Original_P_ID, 
                     string Original_C_ID, 
                     string Original_M_ID, 
@@ -7940,7 +8049,8 @@ namespace Market_final_exam.ManagefTableAdapters {
                     string Original_P_PRICE, 
                     string Original_P_STATE, 
                     string Original_P_DATE, 
-                    string Original_PD_SERIAL) {
+                    string Original_PD_SERIAL, 
+                    string Original_W_ID) {
             if ((P_ID == null)) {
                 throw new global::System.ArgumentNullException("P_ID");
             }
@@ -7989,67 +8099,81 @@ namespace Market_final_exam.ManagefTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(PD_SERIAL));
             }
+            if ((W_ID == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(W_ID));
+            }
             if ((Original_P_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_P_ID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_P_ID));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_P_ID));
             }
             if ((Original_C_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_C_ID));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_C_ID));
             }
             if ((Original_M_ID == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_M_ID));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_M_ID));
             }
             if ((Original_PU_QUANT == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_PU_QUANT));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_PU_QUANT));
             }
             if ((Original_P_PRICE == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_P_PRICE));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_P_PRICE));
             }
             if ((Original_P_STATE == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_P_STATE));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_P_STATE));
             }
             if ((Original_P_DATE == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_P_DATE));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_P_DATE));
             }
             if ((Original_PD_SERIAL == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_PD_SERIAL));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_PD_SERIAL));
+            }
+            if ((Original_W_ID == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_W_ID));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8071,8 +8195,25 @@ namespace Market_final_exam.ManagefTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string C_ID, string M_ID, string PU_QUANT, string P_PRICE, string P_STATE, string P_DATE, string PD_SERIAL, string Original_P_ID, string Original_C_ID, string Original_M_ID, string Original_PU_QUANT, string Original_P_PRICE, string Original_P_STATE, string Original_P_DATE, string Original_PD_SERIAL) {
-            return this.Update(Original_P_ID, C_ID, M_ID, PU_QUANT, P_PRICE, P_STATE, P_DATE, PD_SERIAL, Original_P_ID, Original_C_ID, Original_M_ID, Original_PU_QUANT, Original_P_PRICE, Original_P_STATE, Original_P_DATE, Original_PD_SERIAL);
+        public virtual int Update(
+                    string C_ID, 
+                    string M_ID, 
+                    string PU_QUANT, 
+                    string P_PRICE, 
+                    string P_STATE, 
+                    string P_DATE, 
+                    string PD_SERIAL, 
+                    string W_ID, 
+                    string Original_P_ID, 
+                    string Original_C_ID, 
+                    string Original_M_ID, 
+                    string Original_PU_QUANT, 
+                    string Original_P_PRICE, 
+                    string Original_P_STATE, 
+                    string Original_P_DATE, 
+                    string Original_PD_SERIAL, 
+                    string Original_W_ID) {
+            return this.Update(Original_P_ID, C_ID, M_ID, PU_QUANT, P_PRICE, P_STATE, P_DATE, PD_SERIAL, W_ID, Original_P_ID, Original_C_ID, Original_M_ID, Original_PU_QUANT, Original_P_PRICE, Original_P_STATE, Original_P_DATE, Original_PD_SERIAL, Original_W_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
