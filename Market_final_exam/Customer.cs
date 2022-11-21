@@ -33,6 +33,7 @@ namespace Market_final_exam
         public static string pd_name;
         public static string pd_num;
         public static string stock_price;
+        public static string mar_id;
         public static string c_num;
         public static string market_in;
         public static string pd_num_11;
@@ -102,6 +103,7 @@ namespace Market_final_exam
             pd_name = "";
             pd_num = "";
             stock_price = "";
+            mar_id = "";
             
             DataGridViewRow dgvr = dataGridView4.CurrentRow;
 
@@ -121,10 +123,8 @@ namespace Market_final_exam
 
             foreach (DataRow row1 in selected)
             {
-                stock_price = row1["M_PRICE"].ToString();
+                comboBox1.Items.Add(row1["M_ID"].ToString());
             }
-
-            textBox4.Text = stock_price;
             
         }
 
@@ -136,7 +136,7 @@ namespace Market_final_exam
                 DataRow newRow = purchase.NewRow();
                 newRow["P_ID"] = (int)purchaseTableAdapter4.PURCHNO();
                 newRow["C_ID"] = c_num;
-                newRow["M_ID"] = market_in;
+                newRow["M_ID"] = mar_id;
                 newRow["PU_QUANT"] = textBox2.Text;
                 newRow["P_PRICE"] = stock_price;
                 newRow["P_STATE"] = "장바구니";
@@ -153,6 +153,7 @@ namespace Market_final_exam
                 textBox2.Clear();
                 textBox3.Clear();
                 textBox4.Clear();
+                comboBox1.Items.Clear();
 
                 MessageBox.Show("장바구니에 추가했습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -279,6 +280,22 @@ namespace Market_final_exam
         private void button8_Click(object sender, EventArgs e)
         {
             this.purchaseTableAdapter4.Fill(this.managef.PURCHASE);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mar_id = comboBox1.SelectedItem.ToString();
+
+            DataRow[] selected;
+
+            selected = managef.STOCK.Select("M_ID = " + mar_id);
+
+            foreach (DataRow row1 in selected)
+            {
+                stock_price = row1["M_PRICE"].ToString();
+            }
+
+            textBox4.Text = stock_price;
         }
     }
 }

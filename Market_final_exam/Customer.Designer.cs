@@ -30,8 +30,8 @@ namespace Market_final_exam
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.people11 = new Market_final_exam.people1();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -111,6 +111,9 @@ namespace Market_final_exam
             this.purchaseTableAdapter2 = new Market_final_exam.ManagefTableAdapters.PURCHASETableAdapter();
             this.purchaseTableAdapter3 = new Market_final_exam.ManagefTableAdapters.PURCHASETableAdapter();
             this.purchaseTableAdapter4 = new Market_final_exam.ManagefTableAdapters.PURCHASETableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.people11)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -166,14 +169,15 @@ namespace Market_final_exam
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(27, 56);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(763, 310);
             this.metroTabControl1.TabIndex = 2;
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.metroLabel11);
+            this.metroTabPage1.Controls.Add(this.comboBox1);
             this.metroTabPage1.Controls.Add(this.dataGridView3);
-            this.metroTabPage1.Controls.Add(this.label6);
             this.metroTabPage1.Controls.Add(this.comboBox2);
             this.metroTabPage1.Controls.Add(this.button4);
             this.metroTabPage1.Controls.Add(this.metroLabel9);
@@ -230,9 +234,9 @@ namespace Market_final_exam
             // P_DATE
             // 
             this.P_DATE.DataPropertyName = "P_DATE";
-            dataGridViewCellStyle1.Format = "D";
-            dataGridViewCellStyle1.NullValue = null;
-            this.P_DATE.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Format = "D";
+            dataGridViewCellStyle13.NullValue = null;
+            this.P_DATE.DefaultCellStyle = dataGridViewCellStyle13;
             this.P_DATE.HeaderText = "P_DATE";
             this.P_DATE.Name = "P_DATE";
             this.P_DATE.ReadOnly = true;
@@ -276,7 +280,7 @@ namespace Market_final_exam
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(267, 159);
+            this.label6.Location = new System.Drawing.Point(536, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 19);
             this.label6.TabIndex = 3;
@@ -344,7 +348,7 @@ namespace Market_final_exam
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(266, 67);
+            this.metroLabel9.Location = new System.Drawing.Point(266, 69);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(65, 19);
             this.metroLabel9.TabIndex = 22;
@@ -353,7 +357,7 @@ namespace Market_final_exam
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(323, 96);
+            this.textBox4.Location = new System.Drawing.Point(323, 128);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(116, 23);
@@ -419,7 +423,7 @@ namespace Market_final_exam
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(266, 95);
+            this.metroLabel7.Location = new System.Drawing.Point(267, 127);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(37, 19);
             this.metroLabel7.TabIndex = 16;
@@ -428,7 +432,7 @@ namespace Market_final_exam
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(337, 67);
+            this.textBox3.Location = new System.Drawing.Point(337, 69);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(102, 23);
@@ -437,7 +441,7 @@ namespace Market_final_exam
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(364, 156);
+            this.button3.Location = new System.Drawing.Point(364, 7);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 27);
             this.button3.TabIndex = 14;
@@ -459,7 +463,7 @@ namespace Market_final_exam
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(266, 125);
+            this.metroLabel5.Location = new System.Drawing.Point(266, 159);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(37, 19);
             this.metroLabel5.TabIndex = 12;
@@ -468,7 +472,7 @@ namespace Market_final_exam
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(323, 125);
+            this.textBox2.Location = new System.Drawing.Point(323, 159);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(116, 23);
             this.textBox2.TabIndex = 11;
@@ -496,7 +500,7 @@ namespace Market_final_exam
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(266, 40);
+            this.metroLabel3.Location = new System.Drawing.Point(266, 42);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(51, 19);
             this.metroLabel3.TabIndex = 7;
@@ -505,7 +509,7 @@ namespace Market_final_exam
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(323, 40);
+            this.textBox1.Location = new System.Drawing.Point(323, 42);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(116, 20);
@@ -727,9 +731,9 @@ namespace Market_final_exam
             // pDATEDataGridViewTextBoxColumn
             // 
             this.pDATEDataGridViewTextBoxColumn.DataPropertyName = "P_DATE";
-            dataGridViewCellStyle2.Format = "D";
-            dataGridViewCellStyle2.NullValue = null;
-            this.pDATEDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Format = "D";
+            dataGridViewCellStyle14.NullValue = null;
+            this.pDATEDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.pDATEDataGridViewTextBoxColumn.HeaderText = "날짜";
             this.pDATEDataGridViewTextBoxColumn.Name = "pDATEDataGridViewTextBoxColumn";
             this.pDATEDataGridViewTextBoxColumn.ReadOnly = true;
@@ -826,15 +830,46 @@ namespace Market_final_exam
             // 
             this.purchaseTableAdapter4.ClearBeforeFill = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(337, 98);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(102, 24);
+            this.comboBox1.TabIndex = 28;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(267, 98);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel11.TabIndex = 29;
+            this.metroLabel11.Text = "마트번호";
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(427, 29);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(116, 19);
+            this.metroLabel12.TabIndex = 30;
+            this.metroLabel12.Text = "현재 마트(번호) : ";
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(810, 392);
+            this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label6);
             this.Name = "Customer";
             this.Padding = new System.Windows.Forms.Padding(11, 60, 11, 10);
             this.Text = "Customer";
@@ -949,5 +984,8 @@ namespace Market_final_exam
         private System.Windows.Forms.DataGridViewTextBoxColumn pUQUANTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pPRICEDataGridViewTextBoxColumn;
         private ManagefTableAdapters.PURCHASETableAdapter purchaseTableAdapter4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
     }
 }
