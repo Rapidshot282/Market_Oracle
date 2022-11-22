@@ -30,8 +30,8 @@ namespace Market_final_exam
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.people11 = new Market_final_exam.people1();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -203,8 +203,10 @@ namespace Market_final_exam
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.metroLabel12);
             this.metroTabPage1.Controls.Add(this.metroLabel11);
             this.metroTabPage1.Controls.Add(this.comboBox1);
+            this.metroTabPage1.Controls.Add(this.label6);
             this.metroTabPage1.Controls.Add(this.dataGridView3);
             this.metroTabPage1.Controls.Add(this.comboBox2);
             this.metroTabPage1.Controls.Add(this.button4);
@@ -273,15 +275,15 @@ namespace Market_final_exam
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(277, 181);
+            this.dataGridView3.Size = new System.Drawing.Size(284, 181);
             this.dataGridView3.TabIndex = 27;
             // 
             // P_DATE
             // 
             this.P_DATE.DataPropertyName = "P_DATE";
-            dataGridViewCellStyle5.Format = "D";
-            dataGridViewCellStyle5.NullValue = null;
-            this.P_DATE.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Format = "D";
+            dataGridViewCellStyle11.NullValue = null;
+            this.P_DATE.DefaultCellStyle = dataGridViewCellStyle11;
             this.P_DATE.HeaderText = "P_DATE";
             this.P_DATE.Name = "P_DATE";
             this.P_DATE.ReadOnly = true;
@@ -533,7 +535,7 @@ namespace Market_final_exam
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(675, 227);
+            this.button2.Location = new System.Drawing.Point(682, 227);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 40);
             this.button2.TabIndex = 13;
@@ -920,9 +922,9 @@ namespace Market_final_exam
             // pDATEDataGridViewTextBoxColumn
             // 
             this.pDATEDataGridViewTextBoxColumn.DataPropertyName = "P_DATE";
-            dataGridViewCellStyle6.Format = "D";
-            dataGridViewCellStyle6.NullValue = null;
-            this.pDATEDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Format = "D";
+            dataGridViewCellStyle12.NullValue = null;
+            this.pDATEDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.pDATEDataGridViewTextBoxColumn.HeaderText = "날짜";
             this.pDATEDataGridViewTextBoxColumn.Name = "pDATEDataGridViewTextBoxColumn";
             this.pDATEDataGridViewTextBoxColumn.ReadOnly = true;
@@ -942,7 +944,7 @@ namespace Market_final_exam
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(536, 29);
+            this.label6.Location = new System.Drawing.Point(706, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 19);
             this.label6.TabIndex = 3;
@@ -1037,11 +1039,11 @@ namespace Market_final_exam
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(427, 29);
+            this.metroLabel12.Location = new System.Drawing.Point(593, 10);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(116, 19);
+            this.metroLabel12.Size = new System.Drawing.Size(112, 19);
             this.metroLabel12.TabIndex = 30;
-            this.metroLabel12.Text = "현재 마트(번호) : ";
+            this.metroLabel12.Text = "현재 마트(번호) :";
             // 
             // cARTTableAdapter
             // 
@@ -1071,11 +1073,9 @@ namespace Market_final_exam
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(815, 390);
-            this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label6);
             this.Name = "Customer";
             this.Padding = new System.Windows.Forms.Padding(11, 60, 11, 10);
             this.Text = "Customer";
