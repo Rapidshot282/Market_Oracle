@@ -183,15 +183,15 @@ namespace Market_final_exam
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage6);
+            this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Location = new System.Drawing.Point(12, 53);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 4;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(1054, 374);
             this.metroTabControl1.TabIndex = 0;
             // 

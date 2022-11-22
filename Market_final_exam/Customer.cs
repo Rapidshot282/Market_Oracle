@@ -109,8 +109,9 @@ namespace Market_final_exam
 
             label6.Text = market_in;
 
-            pURCHASEBindingSource4.Filter = "C_ID = " + "'" + c_num + "'";
-            pURCHASEBindingSource4.Filter = "P_STATE = " + "'" + "장바구니" + "'";
+            pURCHASEBindingSource5.Filter = "C_ID = " + "'" + c_num + "'";
+            cARTBindingSource.Filter = "C_ID = " + "'" + c_num + "'";
+            rEFUNDBindingSource.Filter = "C_ID = " + "'" + c_num + "'";
 
             DataRow[] c_number;
 
