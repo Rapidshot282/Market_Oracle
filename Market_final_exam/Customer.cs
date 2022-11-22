@@ -29,6 +29,7 @@ namespace Market_final_exam
         public static DataTable admin;
         public static DataTable customer;
         public static DataTable worker;
+        public static DataTable cart;
 
         public static string pd_name;
         public static string pd_num;
@@ -37,16 +38,41 @@ namespace Market_final_exam
         public static string c_num;
         public static string market_in;
         public static string pd_num_11;
+        public static string st_id_1;
+
+        public static string pu_quant_1;
+        public static int pu_quant_1_int;
+
+        public static int stock_price_int;
+
+        public static string stock_price_result;
+        public static int stock_price_result_int;
+
+        public static string bf_refund_price;
+        public static int bf_refund_price_int;
+
+        public static string af_refund_price;
+        public static int af_refund_price_int;
 
         public static string name;
         public static string m_name;
         private void Customer_Load(object sender, EventArgs e)
         {
+            // TODO: 이 코드는 데이터를 'managef1.REFUND' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
+            this.refundTableAdapter1.Fill(this.managef1.REFUND);
+            // TODO: 이 코드는 데이터를 'dataSet1.CART' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
+            this.cARTTableAdapter.Fill(this.dataSet1.CART);
             // TODO: 이 코드는 데이터를 'managef.PD_DETAIL' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.pD_DETAILTableAdapter1.Fill(this.managef.PD_DETAIL);
             // TODO: 이 코드는 데이터를 'managef.PRODUCT' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.pRODUCTTableAdapter.Fill(this.managef.PRODUCT);
             this.purchaseTableAdapter4.Fill(this.managef.PURCHASE);
+
+            cARTTableAdapter.Fill(dataSet1.CART);
+            cart = dataSet1.Tables["CART"];
+
+            refundTableAdapter1.Fill(managef1.REFUND);
+            refund = managef1.Tables["REFUND"];
 
             purchaseTableAdapter4.Fill(managef.PURCHASE);
             purchase = managef.Tables["PURCHASE"];
@@ -133,21 +159,27 @@ namespace Market_final_exam
 
             if (MessageBox.Show("장바구니에 추가하겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DataRow newRow = purchase.NewRow();
-                newRow["P_ID"] = (int)purchaseTableAdapter4.PURCHNO();
+                pu_quant_1 = textBox2.Text;
+                pu_quant_1_int = int.Parse(pu_quant_1);
+
+                stock_price_result_int = stock_price_int * pu_quant_1_int;
+                stock_price_result = stock_price_result_int.ToString();
+
+                DataRow newRow = cart.NewRow();
+                newRow["CART_ID"] = (int)cARTTableAdapter.CARTNO();
                 newRow["C_ID"] = c_num;
                 newRow["M_ID"] = mar_id;
-                newRow["PU_QUANT"] = textBox2.Text;
-                newRow["P_PRICE"] = stock_price;
-                newRow["P_STATE"] = "장바구니";
+                newRow["PU_QUANT"] = pu_quant_1;
+                newRow["P_PRICE"] = stock_price_result;                
                 newRow["P_DATE"] = (DateTime.Now.ToString("yyyy/MM/dd")).ToString();
                 newRow["PD_SERIAL"] = pd_num;
+                newRow["ST_ID"] = st_id_1;
 
-                purchase.Rows.Add(newRow);
+                cart.Rows.Add(newRow);
 
-                purchaseTableAdapter4.Update(managef.PURCHASE);
+                cARTTableAdapter.Update(dataSet1.CART);
 
-                purchaseTableAdapter4.Fill(managef.PURCHASE);
+                cARTTableAdapter.Fill(dataSet1.CART);
 
                 textBox1.Clear();
                 textBox2.Clear();
@@ -168,9 +200,9 @@ namespace Market_final_exam
         {
             if (MessageBox.Show("장바구니에서 삭제하겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                pURCHASEBindingSource4.RemoveCurrent();
-                purchaseTableAdapter4.Update(managef.PURCHASE);
-                purchaseTableAdapter4.Fill(managef.PURCHASE);
+                cARTBindingSource.RemoveCurrent();
+                cARTTableAdapter.Update(dataSet1.CART);
+                cARTTableAdapter.Fill(dataSet1.CART);
 
                 MessageBox.Show("장바구니에서 삭제했습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -185,18 +217,43 @@ namespace Market_final_exam
         {
             if (MessageBox.Show("선택한 상품을 구매요청 하시겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //선택 행 수정방법
+                string pu_quant_2 = "";
+                string p_price_2 = "";
+                string pd_serial_2 = "";
+                string st_id_2 = "";
+                string ma_in = "";
+
                 DataGridViewRow dgvr = dataGridView3.CurrentRow;
 
+                // 선택한 Row의 데이터를 가져온다.
                 DataRow row = (dgvr.DataBoundItem as DataRowView).Row;
 
-                int rowIndex = dataGridView3.CurrentRow.Index;
+                pu_quant_2 = row["PU_QUANT"].ToString();
+                p_price_2 = row["P_PRICE"].ToString();
+                pd_serial_2 = row["PD_SERIAL"].ToString();
+                st_id_2 = row["ST_ID"].ToString();
+                ma_in = row["M_ID"].ToString(); 
 
-                purchase.Rows[rowIndex]["P_STATE"] = "구매요청";
+                DataRow newRow = purchase.NewRow();
+                newRow["P_ID"] = (int)purchaseTableAdapter4.PURCHNO();
+                newRow["C_ID"] = c_num;
+                newRow["M_ID"] = ma_in;
+                newRow["PU_QUANT"] = pu_quant_2;
+                newRow["P_PRICE"] = p_price_2;
+                newRow["P_DATE"] = (DateTime.Now.ToString("yyyy/MM/dd")).ToString();
+                newRow["P_STATE"] = "구매신청";
+                newRow["PD_SERIAL"] = pd_serial_2;
+                newRow["ST_ID"] = st_id_2;
+
+                purchase.Rows.Add(newRow);
 
                 purchaseTableAdapter4.Update(managef.PURCHASE);
                 purchaseTableAdapter4.Fill(managef.PURCHASE);
-                
+
+                cARTBindingSource.RemoveCurrent();
+                cARTTableAdapter.Update(dataSet1.CART);
+                cARTTableAdapter.Fill(dataSet1.CART);
+
 
                 MessageBox.Show("구매요청이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -248,7 +305,7 @@ namespace Market_final_exam
                 pd_num_11 = row5["PD_ID"].ToString();
             }
 
-            pDDETAILBindingSource.Filter = "PD_ID = " + "'" + pd_num_11 + "'";
+            pDDETAILBindingSource1.Filter = "PD_ID = " + "'" + pd_num_11 + "'";
             pD_DETAILTableAdapter1.Fill(managef.PD_DETAIL);
         }
 
@@ -256,19 +313,124 @@ namespace Market_final_exam
         {
             if (MessageBox.Show("선택한 상품을 환불요청 하시겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //선택 행 수정방법
-                DataGridViewRow dgvr = dataGridView1.CurrentRow;
+                string eq = "";
+                string eq_error = "구매승인";
 
-                DataRow row = (dgvr.DataBoundItem as DataRowView).Row;
+                string p_id_1 = "";
+                string st_id_2 = "";
+                string pu_quant_2 = ""; // textBox5 데이터 바인딩
+                int pu_quant_2_int = 0;
+                string pd_serial_3 = "";
+                string pu_quant_3 = ""; // 변화된 환불갯수
+                int pu_quant_3_int = 0;
 
-                int rowIndex = dataGridView1.CurrentRow.Index;
+                int pu_quant_result = 0;
+                int pu_price_result = 0;
 
-                purchase.Rows[rowIndex]["P_STATE"] = "환불요청";
+                int ch_stock_price_int = 0;
 
-                purchaseTableAdapter4.Update(managef.PURCHASE);
-                purchaseTableAdapter4.Fill(managef.PURCHASE);
+                DataGridViewRow dgvr_1 = dataGridView1.CurrentRow;
 
-                MessageBox.Show("환불요청이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                // 선택한 Row의 데이터를 가져온다.
+                DataRow row_1 = (dgvr_1.DataBoundItem as DataRowView).Row;
+                eq = row_1["P_STATE"].ToString();
+
+                if (eq_error.Equals(eq))
+                {
+
+                    DataGridViewRow dgvr = dataGridView1.CurrentRow;
+
+                    // 선택한 Row의 데이터를 가져온다.
+                    DataRow row = (dgvr.DataBoundItem as DataRowView).Row;
+                    int rowIndex = dataGridView1.CurrentRow.Index;
+
+                    p_id_1 = row["P_ID"].ToString();
+                    pu_quant_2 = row["PU_QUANT"].ToString();
+                    pd_serial_3 = row["PD_SERIAL"].ToString();
+                    st_id_2 = row["ST_ID"].ToString();
+                    bf_refund_price = row["P_PRICE"].ToString();
+
+                    pu_quant_2_int = int.Parse(pu_quant_2);
+
+                    pu_quant_3 = textBox5.Text.ToString();
+
+                    pu_quant_3_int = int.Parse(pu_quant_3);
+
+                    DataRow[] selected;
+
+                    selected = managef.STOCK.Select("ST_ID = " + st_id_2);
+
+                    foreach (DataRow row1 in selected)
+                    {
+                        stock_price = row1["M_PRICE"].ToString();
+                    }
+
+                    ch_stock_price_int = int.Parse(stock_price);
+
+                    bf_refund_price_int = int.Parse(bf_refund_price); //이전가격
+
+                    pu_quant_result = pu_quant_2_int - pu_quant_3_int;
+                    pu_price_result = pu_quant_3_int * ch_stock_price_int;
+
+                    af_refund_price_int = bf_refund_price_int - pu_price_result;
+
+                    af_refund_price = af_refund_price_int.ToString();
+
+                    if (pu_quant_2_int < pu_quant_3_int)
+                    {
+                        MessageBox.Show("구매수량보다 요청수량이 더 많습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    else
+                    {
+                        purchase.Rows[rowIndex]["PU_QUANT"] = pu_quant_result.ToString();
+                        purchase.Rows[rowIndex]["P_PRICE"] = af_refund_price_int.ToString();
+
+
+                        DataRow newRow = refund.NewRow();
+
+                        newRow["REF_ID"] = (int)refundTableAdapter1.REFUNDNO();
+                        newRow["C_ID"] = c_num;
+                        newRow["P_ID"] = p_id_1;
+                        newRow["REF_PRICE"] = pu_price_result.ToString();
+                        newRow["REF_DATE"] = (DateTime.Now.ToString("yyyy/MM/dd")).ToString();
+                        newRow["REF_STATE"] = "환불요청";
+                        newRow["PU_QUANT"] = pu_quant_3_int.ToString();
+                        newRow["PD_DETAIL"] = pd_serial_3;
+
+                        refund.Rows.Add(newRow);
+
+                        if (pu_quant_result < 1)
+                        {
+                            pURCHASEBindingSource5.RemoveCurrent();
+                            purchaseTableAdapter4.Update(managef.PURCHASE);
+                            purchaseTableAdapter4.Fill(managef.PURCHASE);
+
+                            refundTableAdapter1.Update(managef1.REFUND);
+                            refundTableAdapter1.Fill(managef1.REFUND);
+
+                            textBox5.Clear();
+
+                            MessageBox.Show("환불요청이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                        else
+                        {
+                            purchaseTableAdapter4.Update(managef.PURCHASE);
+                            purchaseTableAdapter4.Fill(managef.PURCHASE);
+
+                            refundTableAdapter1.Update(managef1.REFUND);
+                            refundTableAdapter1.Fill(managef1.REFUND);
+
+                            textBox5.Clear();
+
+                            MessageBox.Show("환불요청이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("환불요청은 구매승인이 먼저 되어야 합니다.\n구매승인까지 기다려주세요.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
             else
@@ -293,9 +455,11 @@ namespace Market_final_exam
             foreach (DataRow row1 in selected)
             {
                 stock_price = row1["M_PRICE"].ToString();
+                st_id_1 = row1["ST_ID"].ToString();
             }
 
             textBox4.Text = stock_price;
+            stock_price_int = int.Parse(stock_price);
         }
     }
 }
