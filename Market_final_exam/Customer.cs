@@ -54,8 +54,12 @@ namespace Market_final_exam
         public static string af_refund_price;
         public static int af_refund_price_int;
 
+        public static string eq_reply;
+
         public static string name;
         public static string m_name;
+
+        
         private void Customer_Load(object sender, EventArgs e)
         {
             // TODO: 이 코드는 데이터를 'managef1.REFUND' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
@@ -119,7 +123,7 @@ namespace Market_final_exam
 
             foreach (DataRow row in c_number)
             {
-                listBox1.Items.Add(row["PD_SERIAL"].ToString());
+                listBox1.Items.Add(row["REP_ID"].ToString());
             }
 
             pDDETAILBindingSource.Filter = "PD_ID = " + "'" + pd_num_11 + "'";
@@ -143,6 +147,8 @@ namespace Market_final_exam
 
             textBox1.Text = pd_name;
             textBox3.Text = pd_num;
+
+            Reply.pd_serial = pd_num;
 
             DataRow[] selected;
 
@@ -273,14 +279,15 @@ namespace Market_final_exam
 
             reply_detail = listBox1.SelectedItem.ToString();
 
-            reply_1 = reply.Select("PD_SERIAL = " + "'" + reply_detail + "'");
+            reply_1 = reply.Select("REP_ID = " + "'" + reply_detail + "'");
 
             foreach (DataRow row in reply_1)
             {
                 //선택된 메모 내용 출력
-                label5.Text = row["PD_SERIAL"].ToString();
+                label5.Text = row["RED_KEYW"].ToString();
                 label3.Text = row["REP_DETAIL"].ToString();
                 label4.Text = row["REP_DATE"].ToString();
+                label7.Text = row["PD_SERIAL"].ToString();
             }
         }
 
@@ -461,6 +468,45 @@ namespace Market_final_exam
 
             textBox4.Text = stock_price;
             stock_price_int = int.Parse(stock_price);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {          
+            string p_id_6 = "";
+
+            DataGridViewRow dgvr = dataGridView1.CurrentRow;
+
+            // 선택한 Row의 데이터를 가져온다.
+            DataRow row = (dgvr.DataBoundItem as DataRowView).Row;
+
+            // TextBox에 그리드 데이터를 넣는다.
+            p_id_6 = row["P_ID"].ToString();
+            eq_reply = row["P_STATE"].ToString();
+
+                DataRow[] selected;
+
+                selected = managef.PURCHASE.Select("P_ID = " + p_id_6);
+
+                foreach (DataRow row1 in selected)
+                {
+                    CreateReview.rep_c_id = row1["C_ID"].ToString();
+                    CreateReview.rep_pd_serial = row1["PD_SERIAL"].ToString();
+                }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string eq_error = "구매승인";
+            if(eq_error.Equals(eq_reply))
+            {
+                CreateReview showFrom7 = new CreateReview();
+
+                showFrom7.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("리뷰작성은 구매승인 이후 작성가능합니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
