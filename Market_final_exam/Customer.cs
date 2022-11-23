@@ -472,7 +472,7 @@ namespace Market_final_exam
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {          
-            string p_id_6 = "";
+            
 
             DataGridViewRow dgvr = dataGridView1.CurrentRow;
 
@@ -480,12 +480,12 @@ namespace Market_final_exam
             DataRow row = (dgvr.DataBoundItem as DataRowView).Row;
 
             // TextBox에 그리드 데이터를 넣는다.
-            p_id_6 = row["P_ID"].ToString();
+            CreateReview.rep_p_id = row["P_ID"].ToString();
             eq_reply = row["P_STATE"].ToString();
 
                 DataRow[] selected;
 
-                selected = managef.PURCHASE.Select("P_ID = " + p_id_6);
+                selected = managef.PURCHASE.Select("P_ID = " + CreateReview.rep_p_id);
 
                 foreach (DataRow row1 in selected)
                 {

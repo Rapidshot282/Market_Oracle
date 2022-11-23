@@ -19,6 +19,7 @@ namespace Market_final_exam
 
         public static string rep_pd_serial;
         public static string rep_c_id;
+        public static string rep_p_id;
 
         public static DataTable reply;
 
@@ -33,31 +34,51 @@ namespace Market_final_exam
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string eq = "";
+
             if (MessageBox.Show("리뷰를 등록하시겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string title = "";
-                string detail = "";
+                DataRow[] selected;
 
-                title = textBox1.Text.ToString();
-                detail = richTextBox1.Text.ToString();
+                selected = managef1.REPLY.Select("P_ID = " + rep_p_id);
 
-                DataRow newRow = reply.NewRow();
-                newRow["REP_ID"] = (int)replyTableAdapter1.REPLYNO();
-                newRow["C_ID"] = rep_c_id;
-                newRow["PD_SERIAL"] = rep_pd_serial;
-                newRow["REP_DETAIL"] = detail;
-                newRow["REP_DATE"] = (DateTime.Now.ToString("yyyy/MM/dd")).ToString();
-                newRow["RED_KEYW"] = title;
+                foreach (DataRow row1 in selected)
+                {
+                    eq = row1["REP_ID"].ToString();
+                }
 
-                reply.Rows.Add(newRow);
+                if(string.IsNullOrEmpty(eq))
+                {
+                    string title = "";
+                    string detail = "";
 
-                replyTableAdapter1.Update(managef1.REPLY);
-                replyTableAdapter1.Fill(managef1.REPLY);
+                    title = textBox1.Text.ToString();
+                    detail = richTextBox1.Text.ToString();
 
-                textBox1.Clear();
-                richTextBox1.Clear();
+                    DataRow newRow = reply.NewRow();
+                    newRow["REP_ID"] = (int)replyTableAdapter1.REPLYNO();
+                    newRow["C_ID"] = rep_c_id;
+                    newRow["PD_SERIAL"] = rep_pd_serial;
+                    newRow["REP_DETAIL"] = detail;
+                    newRow["REP_DATE"] = (DateTime.Now.ToString("yyyy/MM/dd")).ToString();
+                    newRow["RED_KEYW"] = title;
+                    newRow["P_ID"] = rep_p_id;
 
-                MessageBox.Show("리뷰등록이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    reply.Rows.Add(newRow);
+
+                    replyTableAdapter1.Update(managef1.REPLY);
+                    replyTableAdapter1.Fill(managef1.REPLY);
+
+                    textBox1.Clear();
+                    richTextBox1.Clear();
+
+                    MessageBox.Show("리뷰등록이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("현재의 거래내역에 리뷰가 이미 있습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
 
             }
             else
