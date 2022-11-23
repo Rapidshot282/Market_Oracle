@@ -384,6 +384,12 @@ namespace Market_final_exam
 
                     af_refund_price = af_refund_price_int.ToString();
 
+                    purchase.Rows[rowIndex]["PU_QUANT"] = pu_quant_result.ToString();
+                    purchase.Rows[rowIndex]["P_PRICE"] = af_refund_price;
+
+                    purchaseTableAdapter4.Update(managef.PURCHASE);
+                    purchaseTableAdapter4.Fill(managef.PURCHASE);
+
                     if (pu_quant_2_int < pu_quant_3_int)
                     {
                         MessageBox.Show("구매수량보다 요청수량이 더 많습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -391,10 +397,6 @@ namespace Market_final_exam
 
                     else
                     {
-                        purchase.Rows[rowIndex]["PU_QUANT"] = pu_quant_result.ToString();
-                        purchase.Rows[rowIndex]["P_PRICE"] = af_refund_price_int.ToString();
-
-
                         DataRow newRow = refund.NewRow();
 
                         newRow["REF_ID"] = (int)refundTableAdapter1.REFUNDNO();

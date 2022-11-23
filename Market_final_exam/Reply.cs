@@ -54,7 +54,7 @@ namespace Market_final_exam
             foreach (DataRow row in reply_1)
             {
                 //선택된 메모 내용 출력
-                label5.Text = row["PD_SERIAL"].ToString();
+                label5.Text = row["RED_KEYW"].ToString();
                 label3.Text = row["REP_DETAIL"].ToString();
                 label4.Text = row["REP_DATE"].ToString();
             }
