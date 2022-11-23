@@ -123,20 +123,31 @@ namespace Market_final_exam
 
             if (MessageBox.Show("현재 거래에 대해 구매거절 하시겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                string eq = "";
+                string eq_error = "구매신청";
                 DataGridViewRow dgvr = dataGridView2.CurrentRow;
 
                 // 선택한 Row의 데이터를 가져온다.
                 DataRow row_1 = (dgvr.DataBoundItem as DataRowView).Row;
-
+                eq = row_1["P_STATE"].ToString();
                 int rowIndex_1 = dataGridView2.CurrentRow.Index;
 
-                purchase.Rows[rowIndex_1]["P_STATE"] = "구매거절";
-                purchase.Rows[rowIndex_1]["W_ID"] = w_name;
+                if (eq_error.Equals(eq))
+                {
+                    
+                    purchase.Rows[rowIndex_1]["P_STATE"] = "구매거절";
+                    purchase.Rows[rowIndex_1]["W_ID"] = w_name;
 
-                pURCHASETableAdapter.Update(managef1.PURCHASE);
-                pURCHASETableAdapter.Fill(managef1.PURCHASE);
+                    pURCHASETableAdapter.Update(managef1.PURCHASE);
+                    pURCHASETableAdapter.Fill(managef1.PURCHASE);
 
-                MessageBox.Show("구매거절이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("구매거절이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("구매승인이 아닌 거래내역은 구매거절을 할 수 없습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
 
             }
             else
