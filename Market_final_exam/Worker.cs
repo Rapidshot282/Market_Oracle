@@ -109,6 +109,8 @@ namespace Market_final_exam
                     sTOCKTableAdapter.Update(managef1.STOCK);
                     sTOCKTableAdapter.Fill(managef1.STOCK);
 
+                    pURCHASETableAdapter.Fill(managef1.PURCHASE);
+
                     MessageBox.Show("구매승인이 정상적으로 처리되었습니다.", "쑤야유통 관리서비스", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }

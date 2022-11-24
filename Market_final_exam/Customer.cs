@@ -59,6 +59,7 @@ namespace Market_final_exam
         public static string name;
         public static string m_name;
 
+        public static string my_mart;
         
         private void Customer_Load(object sender, EventArgs e)
         {
@@ -135,6 +136,7 @@ namespace Market_final_exam
             pd_num = "";
             stock_price = "";
             mar_id = "";
+            string mart_eq = "";
             
             DataGridViewRow dgvr = dataGridView4.CurrentRow;
 
@@ -147,18 +149,25 @@ namespace Market_final_exam
 
             textBox1.Text = pd_name;
             textBox3.Text = pd_num;
+            textBox6.Text = market_in;
 
             Reply.pd_serial = pd_num;
 
             DataRow[] selected;
 
-            selected = managef.STOCK.Select("PD_SERIAL = " + pd_num);
+            selected = managef.STOCK.Select("M_ID = " + market_in + " AND PD_SERIAL = " + pd_num);
 
+            
             foreach (DataRow row1 in selected)
             {
-                comboBox1.Items.Add(row1["M_ID"].ToString());
+                stock_price = row1["M_PRICE"].ToString();
+                st_id_1 = row1["ST_ID"].ToString();
             }
+
+            textBox4.Text = stock_price;
+            stock_price_int = int.Parse(stock_price);
             
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -192,7 +201,7 @@ namespace Market_final_exam
                 textBox2.Clear();
                 textBox3.Clear();
                 textBox4.Clear();
-                comboBox1.Items.Clear();
+                textBox6.Clear();
 
                 MessageBox.Show("장바구니에 추가했습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -456,20 +465,7 @@ namespace Market_final_exam
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mar_id = comboBox1.SelectedItem.ToString();
 
-            DataRow[] selected;
-
-            selected = managef.STOCK.Select("M_ID = " + mar_id);
-
-            foreach (DataRow row1 in selected)
-            {
-                stock_price = row1["M_PRICE"].ToString();
-                st_id_1 = row1["ST_ID"].ToString();
-            }
-
-            textBox4.Text = stock_price;
-            stock_price_int = int.Parse(stock_price);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

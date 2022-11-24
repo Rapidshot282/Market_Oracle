@@ -30,8 +30,8 @@ namespace Market_final_exam
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.people11 = new Market_final_exam.people1();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +39,6 @@ namespace Market_final_exam
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.P_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,16 +75,6 @@ namespace Market_final_exam
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
@@ -115,6 +104,16 @@ namespace Market_final_exam
             this.pSTATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pURCHASEBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.rcdata1 = new Market_final_exam.RCDATA();
             this.customerTableAdapter1 = new Market_final_exam.RCDATATableAdapters.CUSTOMERTableAdapter();
             this.registerTableAdapter1 = new Market_final_exam.RCDATATableAdapters.REGISTERTableAdapter();
@@ -139,6 +138,7 @@ namespace Market_final_exam
             this.purchaseTableAdapter2 = new Market_final_exam.ManagefTableAdapters.PURCHASETableAdapter();
             this.purchaseTableAdapter3 = new Market_final_exam.ManagefTableAdapters.PURCHASETableAdapter();
             this.purchaseTableAdapter4 = new Market_final_exam.ManagefTableAdapters.PURCHASETableAdapter();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.people11)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -149,13 +149,13 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.managef)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDDETAILBindingSource1)).BeginInit();
-            this.metroTabPage4.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managef1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource5)).BeginInit();
+            this.metroTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rcdata1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDDETAILBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).BeginInit();
@@ -199,15 +199,15 @@ namespace Market_final_exam
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Location = new System.Drawing.Point(27, 56);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(763, 310);
             this.metroTabControl1.TabIndex = 2;
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.textBox6);
             this.metroTabPage1.Controls.Add(this.metroLabel12);
             this.metroTabPage1.Controls.Add(this.metroLabel11);
-            this.metroTabPage1.Controls.Add(this.comboBox1);
             this.metroTabPage1.Controls.Add(this.label6);
             this.metroTabPage1.Controls.Add(this.dataGridView3);
             this.metroTabPage1.Controls.Add(this.comboBox2);
@@ -253,17 +253,6 @@ namespace Market_final_exam
             this.metroLabel11.TabIndex = 29;
             this.metroLabel11.Text = "마트번호";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(337, 98);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(102, 24);
-            this.comboBox1.TabIndex = 28;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -303,9 +292,9 @@ namespace Market_final_exam
             // P_DATE
             // 
             this.P_DATE.DataPropertyName = "P_DATE";
-            dataGridViewCellStyle1.Format = "D";
-            dataGridViewCellStyle1.NullValue = null;
-            this.P_DATE.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "D";
+            dataGridViewCellStyle7.NullValue = null;
+            this.P_DATE.DefaultCellStyle = dataGridViewCellStyle7;
             this.P_DATE.HeaderText = "P_DATE";
             this.P_DATE.MinimumWidth = 10;
             this.P_DATE.Name = "P_DATE";
@@ -643,118 +632,6 @@ namespace Market_final_exam
             this.textBox1.Size = new System.Drawing.Size(116, 20);
             this.textBox1.TabIndex = 6;
             // 
-            // metroTabPage4
-            // 
-            this.metroTabPage4.Controls.Add(this.metroLabel15);
-            this.metroTabPage4.Controls.Add(this.label7);
-            this.metroTabPage4.Controls.Add(this.button6);
-            this.metroTabPage4.Controls.Add(this.metroLabel6);
-            this.metroTabPage4.Controls.Add(this.label4);
-            this.metroTabPage4.Controls.Add(this.label3);
-            this.metroTabPage4.Controls.Add(this.label5);
-            this.metroTabPage4.Controls.Add(this.metroLabel1);
-            this.metroTabPage4.Controls.Add(this.listBox1);
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 36);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(755, 270);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "내 리뷰";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel15.Location = new System.Drawing.Point(400, 20);
-            this.metroLabel15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel15.TabIndex = 13;
-            this.metroLabel15.Text = "분류코드 :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.Font = new System.Drawing.Font("함초롬돋움 확장", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(470, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 27);
-            this.label7.TabIndex = 12;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(141, 16);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "리뷰조회";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(260, 19);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel6.TabIndex = 10;
-            this.metroLabel6.Text = "리뷰내용";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Window;
-            this.label4.Font = new System.Drawing.Font("함초롬바탕 확장B", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(268, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 17);
-            this.label4.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Window;
-            this.label3.Font = new System.Drawing.Font("함초롬바탕 확장B", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(296, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 24);
-            this.label3.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Window;
-            this.label5.Font = new System.Drawing.Font("함초롬돋움 확장", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(274, 72);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 27);
-            this.label5.TabIndex = 7;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(19, 19);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel1.TabIndex = 4;
-            this.metroLabel1.Text = "리뷰선택";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(19, 51);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(197, 208);
-            this.listBox1.TabIndex = 2;
-            // 
             // metroTabPage2
             // 
             this.metroTabPage2.Controls.Add(this.button5);
@@ -1036,9 +913,9 @@ namespace Market_final_exam
             // pDATEDataGridViewTextBoxColumn
             // 
             this.pDATEDataGridViewTextBoxColumn.DataPropertyName = "P_DATE";
-            dataGridViewCellStyle2.Format = "D";
-            dataGridViewCellStyle2.NullValue = null;
-            this.pDATEDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Format = "D";
+            dataGridViewCellStyle8.NullValue = null;
+            this.pDATEDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.pDATEDataGridViewTextBoxColumn.HeaderText = "날짜";
             this.pDATEDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.pDATEDataGridViewTextBoxColumn.Name = "pDATEDataGridViewTextBoxColumn";
@@ -1049,6 +926,118 @@ namespace Market_final_exam
             // 
             this.pURCHASEBindingSource5.DataMember = "PURCHASE";
             this.pURCHASEBindingSource5.DataSource = this.managef;
+            // 
+            // metroTabPage4
+            // 
+            this.metroTabPage4.Controls.Add(this.metroLabel15);
+            this.metroTabPage4.Controls.Add(this.label7);
+            this.metroTabPage4.Controls.Add(this.button6);
+            this.metroTabPage4.Controls.Add(this.metroLabel6);
+            this.metroTabPage4.Controls.Add(this.label4);
+            this.metroTabPage4.Controls.Add(this.label3);
+            this.metroTabPage4.Controls.Add(this.label5);
+            this.metroTabPage4.Controls.Add(this.metroLabel1);
+            this.metroTabPage4.Controls.Add(this.listBox1);
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 36);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(755, 270);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "내 리뷰";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel15.Location = new System.Drawing.Point(400, 20);
+            this.metroLabel15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel15.TabIndex = 13;
+            this.metroLabel15.Text = "분류코드 :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
+            this.label7.Font = new System.Drawing.Font("함초롬돋움 확장", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(470, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 27);
+            this.label7.TabIndex = 12;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(141, 16);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "리뷰조회";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel6.Location = new System.Drawing.Point(260, 19);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel6.TabIndex = 10;
+            this.metroLabel6.Text = "리뷰내용";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Window;
+            this.label4.Font = new System.Drawing.Font("함초롬바탕 확장B", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(268, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Window;
+            this.label3.Font = new System.Drawing.Font("함초롬바탕 확장B", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(296, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 24);
+            this.label3.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Window;
+            this.label5.Font = new System.Drawing.Font("함초롬돋움 확장", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(274, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 27);
+            this.label5.TabIndex = 7;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.Location = new System.Drawing.Point(19, 19);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel1.TabIndex = 4;
+            this.metroLabel1.Text = "리뷰선택";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(19, 51);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(197, 208);
+            this.listBox1.TabIndex = 2;
             // 
             // rcdata1
             // 
@@ -1145,12 +1134,21 @@ namespace Market_final_exam
             // 
             this.purchaseTableAdapter4.ClearBeforeFill = true;
             // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(338, 99);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(101, 23);
+            this.textBox6.TabIndex = 31;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(821, 390);
+            this.ClientSize = new System.Drawing.Size(786, 390);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -1169,8 +1167,6 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.managef)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDDETAILBindingSource1)).EndInit();
-            this.metroTabPage4.ResumeLayout(false);
-            this.metroTabPage4.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -1178,6 +1174,8 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.managef1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource5)).EndInit();
+            this.metroTabPage4.ResumeLayout(false);
+            this.metroTabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rcdata1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDDETAILBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).EndInit();
@@ -1269,7 +1267,6 @@ namespace Market_final_exam
         private System.Windows.Forms.DataGridViewTextBoxColumn P_DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn P_STATE;
         private ManagefTableAdapters.PURCHASETableAdapter purchaseTableAdapter4;
-        private System.Windows.Forms.ComboBox comboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private DataSet1 dataSet1;
@@ -1301,5 +1298,6 @@ namespace Market_final_exam
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label7;
         private MetroFramework.Controls.MetroLabel metroLabel15;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
