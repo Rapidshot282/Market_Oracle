@@ -302,6 +302,7 @@ namespace Market_final_exam
                 pURCHASETableAdapter.Update(managef1.PURCHASE);
                 pURCHASETableAdapter.Fill(managef1.PURCHASE);
 
+                MessageBox.Show("환불거절이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
