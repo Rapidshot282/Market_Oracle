@@ -184,7 +184,7 @@ namespace Market_final_exam
                 DataRow newRow = cart.NewRow();
                 newRow["CART_ID"] = (int)cARTTableAdapter.CARTNO();
                 newRow["C_ID"] = c_num;
-                newRow["M_ID"] = mar_id;
+                newRow["M_ID"] = market_in;
                 newRow["PU_QUANT"] = pu_quant_1;
                 newRow["P_PRICE"] = stock_price_result;                
                 newRow["P_DATE"] = (DateTime.Now.ToString("yyyy/MM/dd")).ToString();
@@ -266,7 +266,14 @@ namespace Market_final_exam
                 purchaseTableAdapter4.Update(managef.PURCHASE);
                 purchaseTableAdapter4.Fill(managef.PURCHASE);
 
-                cARTBindingSource.RemoveCurrent();
+                int selectedIndex = this.dataGridView3.CurrentCell.RowIndex;
+
+                if (selectedIndex > -1)
+                {
+                    this.dataGridView3.Rows.RemoveAt(selectedIndex);
+
+                    this.dataGridView3.Refresh();
+                }
                 cARTTableAdapter.Update(dataSet1.CART);
                 cARTTableAdapter.Fill(dataSet1.CART);
 
@@ -393,8 +400,8 @@ namespace Market_final_exam
 
                     af_refund_price = af_refund_price_int.ToString();
 
-                    purchase.Rows[rowIndex]["PU_QUANT"] = pu_quant_result.ToString();
-                    purchase.Rows[rowIndex]["P_PRICE"] = af_refund_price;
+                    row["PU_QUANT"] = pu_quant_result.ToString();
+                    row["P_PRICE"] = af_refund_price;
 
                     purchaseTableAdapter4.Update(managef.PURCHASE);
                     purchaseTableAdapter4.Fill(managef.PURCHASE);
@@ -406,6 +413,10 @@ namespace Market_final_exam
 
                     else
                     {
+
+                        purchaseTableAdapter4.Update(managef.PURCHASE);
+                        purchaseTableAdapter4.Fill(managef.PURCHASE);
+
                         DataRow newRow = refund.NewRow();
 
                         newRow["REF_ID"] = (int)refundTableAdapter1.REFUNDNO();
@@ -416,12 +427,22 @@ namespace Market_final_exam
                         newRow["REF_STATE"] = "환불요청";
                         newRow["PU_QUANT"] = pu_quant_3_int.ToString();
                         newRow["PD_DETAIL"] = pd_serial_3;
+                        newRow["ST_ID"] = st_id_2;
 
                         refund.Rows.Add(newRow);
 
-                        if (pu_quant_result < 1)
+                        if (pu_quant_result < 1 || pu_quant_result == 0)
                         {
-                            pURCHASEBindingSource5.RemoveCurrent();
+
+                            int selectedIndex = this.dataGridView1.CurrentCell.RowIndex;
+
+                            if (selectedIndex > -1)
+                            {
+                                this.dataGridView1.Rows.RemoveAt(selectedIndex);
+
+                                this.dataGridView1.Refresh();
+                            }
+
                             purchaseTableAdapter4.Update(managef.PURCHASE);
                             purchaseTableAdapter4.Fill(managef.PURCHASE);
 
@@ -506,5 +527,7 @@ namespace Market_final_exam
                 MessageBox.Show("리뷰작성은 구매승인 이후 작성가능합니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }
