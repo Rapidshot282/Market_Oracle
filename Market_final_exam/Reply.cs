@@ -55,7 +55,7 @@ namespace Market_final_exam
             {
                 //선택된 메모 내용 출력
                 label5.Text = row["RED_KEYW"].ToString();
-                label3.Text = row["REP_DETAIL"].ToString();
+                richTextBox1.Text = row["REP_DETAIL"].ToString();
                 label4.Text = row["REP_DATE"].ToString();
             }
         }

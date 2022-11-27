@@ -36,6 +36,7 @@ namespace Market_final_exam
             this.replyTableAdapter1 = new Market_final_exam.ManagefTableAdapters.REPLYTableAdapter();
             this.managef1 = new Market_final_exam.Managef();
             this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.managef1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,9 +56,8 @@ namespace Market_final_exam
             this.label4.Font = new System.Drawing.Font("함초롬바탕 확장", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(23, 168);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 16);
+            this.label4.Size = new System.Drawing.Size(0, 16);
             this.label4.TabIndex = 12;
-            this.label4.Text = "date";
             // 
             // label3
             // 
@@ -75,9 +75,8 @@ namespace Market_final_exam
             this.label5.Font = new System.Drawing.Font("함초롬돋움 확장", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(29, 189);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 27);
+            this.label5.Size = new System.Drawing.Size(0, 27);
             this.label5.TabIndex = 10;
-            this.label5.Text = "제목";
             // 
             // replyTableAdapter1
             // 
@@ -98,11 +97,21 @@ namespace Market_final_exam
             this.label1.TabIndex = 13;
             this.label1.Text = "보고싶은 리뷰를 선택해주세요.";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(55, 220);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(469, 99);
+            this.richTextBox1.TabIndex = 14;
+            this.richTextBox1.Text = "";
+            // 
             // Reply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 342);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -126,5 +135,6 @@ namespace Market_final_exam
         private ManagefTableAdapters.REPLYTableAdapter replyTableAdapter1;
         private Managef managef1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

@@ -59,6 +59,12 @@ namespace Market_final_exam
         public static string name;
         public static string m_name;
 
+        
+        public static string pr_af_price;
+        public static string pr_bf_price;
+        public static string pr_pd_serial;
+        public static string pr_id_public;
+
         public static string my_mart;
         
         private void Customer_Load(object sender, EventArgs e)
@@ -72,6 +78,9 @@ namespace Market_final_exam
             // TODO: 이 코드는 데이터를 'managef.PRODUCT' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.pRODUCTTableAdapter.Fill(this.managef.PRODUCT);
             this.purchaseTableAdapter4.Fill(this.managef.PURCHASE);
+
+            pRODUCTTableAdapter.Fill(managef.PRODUCT);
+            product = managef.Tables["PRODUCT"];
 
             cARTTableAdapter.Fill(dataSet1.CART);
             cart = dataSet1.Tables["CART"];
@@ -99,6 +108,9 @@ namespace Market_final_exam
 
             replyTableAdapter1.Fill(managef.REPLY);
             reply = managef.Tables["REPLY"];
+
+            proD_CHANGETableAdapter1.Fill(managef1.PROD_CHANGE);
+            prod_change = managef1.Tables["PROD_CHANGE"];
 
             label2.Text = name.ToString();
 
@@ -128,6 +140,14 @@ namespace Market_final_exam
             }
 
             pDDETAILBindingSource.Filter = "PD_ID = " + "'" + pd_num_11 + "'";
+
+            DataRow[] select_prch;
+            select_prch = managef1.PROD_CHANGE.Select("M_ID = " + market_in);
+
+            foreach (DataRow row_3 in select_prch)
+            {
+                listBox2.Items.Add(row_3["PRCH_ID"].ToString());
+            }
         }
 
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -164,7 +184,7 @@ namespace Market_final_exam
                 st_id_1 = row1["ST_ID"].ToString();
             }
 
-            textBox4.Text = stock_price;
+            textBox4.Text = stock_price + "원";
             stock_price_int = int.Parse(stock_price);
             
 
@@ -301,7 +321,7 @@ namespace Market_final_exam
             {
                 //선택된 메모 내용 출력
                 label5.Text = row["RED_KEYW"].ToString();
-                label3.Text = row["REP_DETAIL"].ToString();
+                richTextBox1.Text = row["REP_DETAIL"].ToString();
                 label4.Text = row["REP_DATE"].ToString();
                 label7.Text = row["PD_SERIAL"].ToString();
             }
@@ -528,6 +548,37 @@ namespace Market_final_exam
             }
         }
 
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pr_id_public = listBox2.SelectedItem.ToString();
+            string pr_name = "";
+
+            DataRow[] select_prch_private;
+            
+            select_prch_private = managef1.PROD_CHANGE.Select("PRCH_ID = " + pr_id_public);
+
+            foreach (DataRow pr_row in select_prch_private)
+            {
+         
+                    pr_af_price = pr_row["AF_PRICE"].ToString();
+                    pr_bf_price = pr_row["BF_PRICE"].ToString();
+                    pr_pd_serial = pr_row["PD_SERIAL"].ToString();
+
+            }
+
+            DataRow[] select_pr_name;
+
+            select_pr_name = managef.PD_DETAIL.Select("PD_SERIAL = " + pr_pd_serial);
+
+            foreach(DataRow prd_row in select_pr_name)
+            {
+                pr_name = prd_row["PD_NAME"].ToString();
+            }
+
+            label8.Text = pr_name.ToString();
+            label9.Text = pr_bf_price.ToString() + "원" + " ----> " + pr_af_price.ToString() + "원";
+            label10.Text = pr_pd_serial.ToString();
+        }
         
     }
 }

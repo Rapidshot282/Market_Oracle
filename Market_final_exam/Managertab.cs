@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
+using System.Windows.Forms.DataVisualization;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Market_final_exam
 {
@@ -29,6 +32,14 @@ namespace Market_final_exam
         public static DataTable admin;
         public static DataTable customer;
         public static DataTable worker;
+
+        public static string serial;
+        public static string pd_serial;
+        public static string ch_price;
+        public static string st_id_m;
+        public static string m_id;
+
+        public static string pd_serial_ch;
         private void Managertab_Load(object sender, EventArgs e)
         {
             // TODO: 이 코드는 데이터를 'managef.STOCK' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
@@ -37,6 +48,7 @@ namespace Market_final_exam
             this.registerTableAdapter1.Fill(this.rcdata1.REGISTER);
 
             this.purchaseTableAdapter1.Fill(this.managef.PURCHASE);
+            this.proD_CHANGETableAdapter1.Fill(this.managef.PROD_CHANGE);
 
             marketTableAdapter1.Fill(managef1.MARKET);
             market = managef1.Tables["MARKET"];
@@ -69,7 +81,7 @@ namespace Market_final_exam
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string m_id = listBox1.SelectedItem.ToString();
+            m_id = listBox1.SelectedItem.ToString();
 
             DataRow[] selected;
 
@@ -88,66 +100,58 @@ namespace Market_final_exam
        
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string serial = listBox2.SelectedItem.ToString();
+            serial = listBox2.SelectedItem.ToString();
 
             DataRow[] selected;
 
-            selected = managef1.STOCK.Select("PD_SERIAL = " + serial);
+            selected = managef1.STOCK.Select("M_ID = " + m_id + " AND PD_SERIAL = " + serial);
 
             foreach (DataRow row in selected)
             {
                 textBox1.Text = row["M_PRICE"].ToString();
+                st_id_m = row["ST_ID"].ToString();
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string serial = listBox1.SelectedItem.ToString();
-            string pd_serial = listBox2.SelectedItem.ToString();
-            
-            DataRow newRow = prod_change.NewRow();
-            newRow["PRCH_ID"] = (int)proD_CHANGETableAdapter1.PRCH();
-            newRow["BF_PRICE"] = textBox1.Text;
-            newRow["AF_PRICE"] = textBox2.Text;
-            newRow["M_ID"] = serial;
-            newRow["PD_SERIAL"] = pd_serial;
 
-            prod_change.Rows.Add(newRow);
-
-            proD_CHANGETableAdapter1.Update(managef1.PROD_CHANGE);
-
-            try
+            if (MessageBox.Show("가격 변동사항을 저장하시겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.sTOCKBindingSource.EndEdit();
-                int ret = this.stockTableAdapter1.Update(this.managef.STOCK);
-                if (ret > 0)
+                ch_price = textBox2.Text.ToString();
+
+                DataRow newRow = prod_change.NewRow();
+                newRow["PRCH_ID"] = (int)proD_CHANGETableAdapter1.PRCH();
+                newRow["BF_PRICE"] = textBox1.Text;
+                newRow["AF_PRICE"] = ch_price;
+                newRow["M_ID"] = m_id;
+                newRow["PD_SERIAL"] = serial;
+
+                prod_change.Rows.Add(newRow);
+
+                proD_CHANGETableAdapter1.Update(managef1.PROD_CHANGE);
+
+                DataRow[] selected;
+
+                selected = managef1.STOCK.Select("ST_ID = " + st_id_m);
+
+                foreach (DataRow row in selected)
                 {
-                    MessageBox.Show("변동된 가격이 확정되었습니다.", "가격변동정보", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    row["M_PRICE"] = textBox2.Text.ToString();
                 }
+
+                stockTableAdapter1.Update(managef1.STOCK);
+                stockTableAdapter1.Fill(managef1.STOCK);
+                MessageBox.Show("변동사항이 저장되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            catch (System.Exception ex)
+            else
             {
-                MessageBox.Show("가격 변경 실패", "가격변동정보", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("변동사항 저장이 취소되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                textBox1.Text = "";
-                textBox2.Text = "";
-
-            stockTableAdapter1.Fill(managef1.STOCK);
-            stock = managef1.Tables["STOCK"];
 
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // 현재 Row를 가져온다.
-            DataGridViewRow dgvr = dataGridView1.CurrentRow;
-
-            // 선택한 Row의 데이터를 가져온다.
-            DataRow row = (dgvr.DataBoundItem as DataRowView).Row;
-
-            // TextBox에 그리드 데이터를 넣는다.
-            textBox2.Text = row["M_PRICE"].ToString();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -221,7 +225,16 @@ namespace Market_final_exam
             {
                 MessageBox.Show("승인이 취소되었습니다.", "쑤야유통 로그인서비스", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Chart_stock showFrom8 = new Chart_stock();
+
+            showFrom8.ShowDialog();
+        }
+
+
     }
 }

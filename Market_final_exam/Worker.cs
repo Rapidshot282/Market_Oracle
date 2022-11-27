@@ -48,7 +48,7 @@ namespace Market_final_exam
 
 
             // TODO: 이 코드는 데이터를 'managef1.PURCHASE' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
-            this.pURCHASETableAdapter.Fill(this.managef1.PURCHASE);
+            this.pURCHASETableAdapter.Fill(this.managef.PURCHASE);
             // TODO: 이 코드는 데이터를 'managef1.REFUND' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.rEFUNDTableAdapter.Fill(this.managef1.REFUND);
 
