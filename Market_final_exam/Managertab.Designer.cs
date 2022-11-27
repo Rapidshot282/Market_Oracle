@@ -31,12 +31,6 @@ namespace Market_final_exam
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.people11 = new Market_final_exam.people1();
             this.administratorTableAdapter1 = new Market_final_exam.people1TableAdapters.ADMINISTRATORTableAdapter();
             this.workerTableAdapter1 = new Market_final_exam.people1TableAdapters.WORKERTableAdapter();
@@ -103,13 +97,6 @@ namespace Market_final_exam
             this.wIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rEGISTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.register12 = new Market_final_exam.register12();
@@ -148,9 +135,6 @@ namespace Market_final_exam
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).BeginInit();
-            this.metroTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEGISTERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.register12)).BeginInit();
@@ -176,15 +160,13 @@ namespace Market_final_exam
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Location = new System.Drawing.Point(12, 53);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 4;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1058, 374);
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -592,31 +574,31 @@ namespace Market_final_exam
             this.metroTabPage5.Name = "metroTabPage5";
             this.metroTabPage5.Size = new System.Drawing.Size(1050, 334);
             this.metroTabPage5.TabIndex = 4;
-            this.metroTabPage5.Text = "재고현황";
+            this.metroTabPage5.Text = "통계";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
             this.metroTabPage5.VerticalScrollbarSize = 5;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(862, 167);
+            this.button5.Location = new System.Drawing.Point(883, 71);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(119, 35);
             this.button5.TabIndex = 17;
-            this.button5.Text = "button5";
+            this.button5.Text = "매출현황";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(724, 167);
+            this.button4.Location = new System.Drawing.Point(745, 71);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(119, 35);
             this.button4.TabIndex = 16;
-            this.button4.Text = "button4";
+            this.button4.Text = "판매순위현황";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(588, 167);
+            this.button3.Location = new System.Drawing.Point(609, 71);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 35);
             this.button3.TabIndex = 15;
@@ -798,102 +780,6 @@ namespace Market_final_exam
             this.pURCHASEBindingSource.DataMember = "PURCHASE";
             this.pURCHASEBindingSource.DataSource = this.managef;
             // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.Controls.Add(this.metroLabel13);
-            this.metroTabPage3.Controls.Add(this.chart3);
-            this.metroTabPage3.Controls.Add(this.metroLabel12);
-            this.metroTabPage3.Controls.Add(this.metroLabel11);
-            this.metroTabPage3.Controls.Add(this.chart2);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.HorizontalScrollbarSize = 5;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 36);
-            this.metroTabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(1050, 334);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "상품현황";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.VerticalScrollbarSize = 5;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel13.Location = new System.Drawing.Point(701, 29);
-            this.metroLabel13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(138, 19);
-            this.metroLabel13.TabIndex = 14;
-            this.metroLabel13.Text = "덜 팔리는 상품 TOP5";
-            // 
-            // chart3
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart3.Legends.Add(legend1);
-            this.chart3.Location = new System.Drawing.Point(687, 51);
-            this.chart3.Name = "chart3";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart3.Series.Add(series1);
-            this.chart3.Size = new System.Drawing.Size(284, 267);
-            this.chart3.TabIndex = 13;
-            this.chart3.Text = "chart3";
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel12.Location = new System.Drawing.Point(381, 29);
-            this.metroLabel12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(138, 19);
-            this.metroLabel12.TabIndex = 12;
-            this.metroLabel12.Text = "잘 팔리는 상품 TOP5";
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel11.Location = new System.Drawing.Point(19, 29);
-            this.metroLabel11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel11.TabIndex = 11;
-            this.metroLabel11.Text = "환불";
-            // 
-            // chart2
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(367, 51);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(284, 267);
-            this.chart2.TabIndex = 3;
-            this.chart2.Text = "chart2";
-            // 
-            // metroTabPage4
-            // 
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.HorizontalScrollbarSize = 5;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 36);
-            this.metroTabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(1050, 334);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "매출현황";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            this.metroTabPage4.VerticalScrollbarSize = 5;
-            // 
             // register12
             // 
             this.register12.DataSetName = "register12";
@@ -1004,10 +890,6 @@ namespace Market_final_exam
             this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).EndInit();
-            this.metroTabPage3.ResumeLayout(false);
-            this.metroTabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEGISTERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.register12)).EndInit();
@@ -1035,8 +917,6 @@ namespace Market_final_exam
         private ManagefTableAdapters.STOCKTableAdapter stockTableAdapter1;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage3;
-        private MetroFramework.Controls.MetroTabPage metroTabPage4;
         private MetroFramework.Controls.MetroTabPage metroTabPage5;
         private System.Windows.Forms.BindingSource mARKETBindingSource;
         private System.Windows.Forms.ListBox listBox1;
@@ -1066,7 +946,6 @@ namespace Market_final_exam
         private System.Windows.Forms.BindingSource rEGISTERBindingSource3;
         private System.Windows.Forms.BindingSource rcdata1BindingSource;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataGridView dataGridView5;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel6;
@@ -1083,10 +962,6 @@ namespace Market_final_exam
         private System.Windows.Forms.DataGridViewTextBoxColumn sTREMAINDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mPRICEDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mIDDataGridViewTextBoxColumn3;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource pURCHASEBindingSource;
