@@ -13,16 +13,14 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Market_final_exam
 {
-    public partial class Chart_stock : MetroFramework.Forms.MetroForm
+    public partial class Chart_price_Top5 : MetroFramework.Forms.MetroForm
     {
-        public Chart_stock()
+        public Chart_price_Top5()
         {
             InitializeComponent();
         }
 
-        public static string pd_serial_ch;
-
-        private void Chart_stock_Load(object sender, EventArgs e)
+        private void Chart_price_Load(object sender, EventArgs e)
         {
             oracleConnection1.Open();
         }
@@ -45,7 +43,7 @@ namespace Market_final_exam
             chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "재고량";
+            series1.Name = "원";
             series2.Name = "";
             chart1.Series.Add(series1);
 
@@ -57,37 +55,35 @@ namespace Market_final_exam
 
         private void add_data_st_ch()
         {
-            
-            oracleCommand1.CommandText = "SELECT MARKET.M_ID as 마트번호, stock.st_remain as 재고량 FROM MARKET LEFT OUTER JOIN STOCK on MARKET.M_ID = STOCK.M_ID WHERE STOCK.PD_SERIAL = " + "'" + pd_serial_ch + "'";
+
+            oracleCommand1.CommandText = "SELECT PD_DETAIL.PD_NAME as 물품명, SUM(purchase.p_price) as 물품매출 FROM PD_DETAIL, PURCHASE WHERE PD_DETAIL.PD_SERIAL = purchase.pd_serial AND ROWNUM <= 7 GROUP BY pd_detail.pd_name";
 
             OracleDataReader rdr = oracleCommand1.ExecuteReader();
 
             while (rdr.Read())
             {
                 //series point에 데이터 입력
-                chart1.Series[0].Points.AddXY(rdr["마트번호"], rdr["재고량"]);
+                chart1.Series[0].Points.AddXY(rdr["물품명"], rdr["물품매출"]);
             }
             rdr.Close();
             oracleConnection1.Close();
-            
+
         }
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pd_serial_ch = comboBox3.SelectedItem.ToString();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string a = "재고량";
-            Create_chart_stock();
-            add_data_st_ch();
+            
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            Chart_stock showFrom9 = new Chart_stock();
-            showFrom9.ShowDialog();
+            Create_chart_stock();
+            add_data_st_ch();
         }
     }
 }

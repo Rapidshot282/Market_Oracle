@@ -7,27 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Oracle.ManagedDataAccess.Client;
 using System.Windows.Forms.DataVisualization;
 using System.Windows.Forms.DataVisualization.Charting;
+using Oracle.ManagedDataAccess.Client;
 
 namespace Market_final_exam
 {
-    public partial class Chart_stock : MetroFramework.Forms.MetroForm
+    public partial class Chart_total_margin : MetroFramework.Forms.MetroForm
     {
-        public Chart_stock()
+        public Chart_total_margin()
         {
             InitializeComponent();
         }
 
-        public static string pd_serial_ch;
-
-        private void Chart_stock_Load(object sender, EventArgs e)
+        private void Chart_total_margin_Load(object sender, EventArgs e)
         {
             oracleConnection1.Open();
         }
 
-        private void Create_chart_stock()
+        public static string date;
+
+        private void Create_chart()
         {
             ChartArea chartArea1 = new ChartArea();
             Legend legend1 = new Legend();
@@ -45,7 +45,7 @@ namespace Market_final_exam
             chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "재고량";
+            series1.Name = "원";
             series2.Name = "";
             chart1.Series.Add(series1);
 
@@ -57,37 +57,59 @@ namespace Market_final_exam
 
         private void add_data_st_ch()
         {
-            
-            oracleCommand1.CommandText = "SELECT MARKET.M_ID as 마트번호, stock.st_remain as 재고량 FROM MARKET LEFT OUTER JOIN STOCK on MARKET.M_ID = STOCK.M_ID WHERE STOCK.PD_SERIAL = " + "'" + pd_serial_ch + "'";
+           
+            oracleCommand1.CommandText = "SELECT purchase.p_date as 날짜, SUM(purchase.p_price) as 매출 FROM PURCHASE WHERE purchase.p_date = '" + date +"' GROUP BY purchase.p_date";
 
             OracleDataReader rdr = oracleCommand1.ExecuteReader();
 
             while (rdr.Read())
             {
                 //series point에 데이터 입력
-                chart1.Series[0].Points.AddXY(rdr["마트번호"], rdr["재고량"]);
+                chart1.Series[0].Points.AddXY(rdr["날짜"], rdr["매출"]);
             }
             rdr.Close();
             oracleConnection1.Close();
-            
-        }
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            pd_serial_ch = comboBox3.SelectedItem.ToString();
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void margin()
         {
-            string a = "재고량";
-            Create_chart_stock();
-            add_data_st_ch();
+            oracleConnection1.Open();
+
+            string margin_cost = "";
+            oracleCommand2.CommandText = "SELECT purchase.p_date as 날짜, SUM(purchase.p_price) as 매출 FROM PURCHASE WHERE purchase.p_date = '" + date + "' GROUP BY purchase.p_date";
+
+            OracleDataReader rdr2 = oracleCommand1.ExecuteReader();
+
+            while (rdr2.Read())
+            {
+                //series point에 데이터 입력
+                margin_cost = rdr2["매출"].ToString();
+            }
+
+            label1.Text = margin_cost + "원";
+
+            rdr2.Close();
+            oracleConnection1.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Chart_stock showFrom9 = new Chart_stock();
-            showFrom9.ShowDialog();
+            Chart_total_margin showFrom13 = new Chart_total_margin();
+            showFrom13.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Create_chart();
+            add_data_st_ch();
+            margin();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            date = comboBox1.SelectedItem.ToString();
         }
     }
 }

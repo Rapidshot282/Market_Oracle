@@ -235,6 +235,39 @@ namespace Market_final_exam
             showFrom8.ShowDialog();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Chart_total_margin showFrom13 = new Chart_total_margin();
 
+            showFrom13.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Chart_price_Top5 showFrom10 = new Chart_price_Top5();
+
+            showFrom10.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Chart_customer_Top5 showFrom11 = new Chart_customer_Top5();
+
+            showFrom11.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Chart_market_Top5 showFrom12 = new Chart_market_Top5();
+
+            showFrom12.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Chart_total_refund showFrom14 = new Chart_total_refund();
+
+            showFrom14.ShowDialog();
+        }
     }
 }

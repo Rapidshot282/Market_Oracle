@@ -30,11 +30,11 @@ namespace Market_final_exam
         private void InitializeComponent()
         {
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.oracleCommand1 = new Oracle.ManagedDataAccess.Client.OracleCommand();
             this.oracleConnection1 = new Oracle.ManagedDataAccess.Client.OracleConnection();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // metroLabel17
@@ -45,6 +45,37 @@ namespace Market_final_exam
             this.metroLabel17.Size = new System.Drawing.Size(72, 19);
             this.metroLabel17.TabIndex = 12;
             this.metroLabel17.Text = "상품번호 :";
+            // 
+            // oracleCommand1
+            // 
+            this.oracleCommand1.Connection = this.oracleConnection1;
+            this.oracleCommand1.Transaction = null;
+            // 
+            // oracleConnection1
+            // 
+            this.oracleConnection1.ChunkMigrationConnectionTimeout = "120";
+            this.oracleConnection1.ConnectionString = "TNS_ADMIN=C:\\app\\minsu\\dbhomeXE\\network\\admin;USER ID=MINSU;PASSWORD=2435;DATA SO" +
+    "URCE=MINSDB;PERSIST SECURITY INFO=True";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(239, 74);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 20);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "조회";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(320, 74);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 20);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "새로고침";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox3
             // 
@@ -357,37 +388,6 @@ namespace Market_final_exam
             this.comboBox3.TabIndex = 15;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // oracleCommand1
-            // 
-            this.oracleCommand1.Connection = this.oracleConnection1;
-            this.oracleCommand1.Transaction = null;
-            // 
-            // oracleConnection1
-            // 
-            this.oracleConnection1.ChunkMigrationConnectionTimeout = "120";
-            this.oracleConnection1.ConnectionString = "TNS_ADMIN=C:\\app\\minsu\\dbhomeXE\\network\\admin;USER ID=MINSU;PASSWORD=2435;DATA SO" +
-    "URCE=MINSDB;PERSIST SECURITY INFO=True";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(239, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 20);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "조회";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(320, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 20);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "새로고침";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Chart_stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -408,11 +408,11 @@ namespace Market_final_exam
 
         #endregion
         private MetroFramework.Controls.MetroLabel metroLabel17;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private Oracle.ManagedDataAccess.Client.OracleCommand oracleCommand1;
         private Oracle.ManagedDataAccess.Client.OracleConnection oracleConnection1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

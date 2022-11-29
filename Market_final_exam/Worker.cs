@@ -63,6 +63,15 @@ namespace Market_final_exam
             sTOCKTableAdapter.Fill(managef1.STOCK);
             stock = managef1.Tables["STOCK"];
 
+            DataRow[] select_st_id;
+
+            select_st_id = managef1.PURCHASE.Select("W_ID is null");
+
+            foreach(DataRow row_st_id in select_st_id)
+            {
+                listBox1.Items.Add(row_st_id["ST_ID"].ToString());
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -339,6 +348,22 @@ namespace Market_final_exam
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            DataRow[] select_st_id;
+
+            select_st_id = managef1.PURCHASE.Select("W_ID is null");
+
+            foreach (DataRow row_st_id in select_st_id)
+            {
+                listBox1.Items.Add(row_st_id["ST_ID"].ToString());
+            }
+            pURCHASETableAdapter.Update(managef.PURCHASE);
+            pURCHASETableAdapter.Fill(managef.PURCHASE);
 
         }
     }
