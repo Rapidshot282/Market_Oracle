@@ -189,7 +189,6 @@ namespace Market_final_exam
             textBox7.Text = st_remain;
             stock_price_int = int.Parse(stock_price);
             
-
         }
 
         private void button1_Click(object sender, EventArgs e)
