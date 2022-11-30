@@ -184,6 +184,10 @@ namespace Market_final_exam
                 stockTableAdapter1.Update(managef1.STOCK);
                 stockTableAdapter1.Fill(managef1.STOCK);
                 stockTableAdapter1.Fill(managef.STOCK);
+
+                textBox1.Clear();
+                textBox2.Clear();
+
                 MessageBox.Show("변동사항이 저장되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
@@ -387,6 +391,9 @@ namespace Market_final_exam
                 stockTableAdapter1.Fill(managef1.STOCK);
                 stockTableAdapter1.Fill(managef.STOCK);
 
+                textBox3.Clear();
+                textBox4.Clear();
+
                 MessageBox.Show("변동사항이 저장되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
@@ -434,6 +441,10 @@ namespace Market_final_exam
                 stockTableAdapter1.Update(managef1.STOCK);
                 stockTableAdapter1.Fill(managef1.STOCK);
                 stockTableAdapter1.Fill(managef.STOCK);
+
+                textBox5.Clear();
+                textBox6.Clear();
+                textBox7.Clear();
 
                 MessageBox.Show("신규상품이 입고되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
