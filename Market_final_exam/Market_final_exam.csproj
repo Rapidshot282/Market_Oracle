@@ -114,6 +114,12 @@
     <Compile Include="Chart_price_Top5.Designer.cs">
       <DependentUpon>Chart_price_Top5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chart_refund_top5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart_refund_top5.Designer.cs">
+      <DependentUpon>Chart_refund_top5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chart_stock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Chart_price_Top5.resx">
       <DependentUpon>Chart_price_Top5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart_refund_top5.resx">
+      <DependentUpon>Chart_refund_top5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chart_stock.resx">
       <DependentUpon>Chart_stock.cs</DependentUpon>

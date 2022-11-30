@@ -41,18 +41,20 @@ namespace Market_final_exam
         {
             // TODO: 이 코드는 데이터를 'managef2.REFUND' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.rEFUNDTableAdapter.Fill(this.managef2.REFUND);
+            rEFUNDTableAdapter.Fill(managef3.REFUND);
+            sTOCKTableAdapter.Fill(managef3.STOCK);
             // TODO: 이 코드는 데이터를 'managef3.REFUND' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.rEFUNDTableAdapter.Fill(this.managef3.REFUND);
             // TODO: 이 코드는 데이터를 'managef3.STOCK' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.sTOCKTableAdapter.Fill(this.managef3.STOCK);
 
+            this.sTOCKTableAdapter.Fill(this.managef1.STOCK);
 
             // TODO: 이 코드는 데이터를 'managef1.PURCHASE' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.pURCHASETableAdapter.Fill(this.managef.PURCHASE);
             // TODO: 이 코드는 데이터를 'managef1.REFUND' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.rEFUNDTableAdapter.Fill(this.managef1.REFUND);
 
-            this.sTOCKTableAdapter.Fill(this.managef1.STOCK);
 
             pURCHASETableAdapter.Fill(managef1.PURCHASE);
             purchase = managef1.Tables["PURCHASE"];
@@ -118,7 +120,6 @@ namespace Market_final_exam
 
                     // 선택한 Row의 데이터를 가져온다.
                     DataRow row_6 = (dgvr_1.DataBoundItem as DataRowView).Row;
-
 
                     row_6["ST_REMAIN"] = quant_result_int.ToString();
 
@@ -219,11 +220,13 @@ namespace Market_final_exam
 
                     quant_result_int = af_quant + bf_quant;
 
-                    int rowIndex_1 = dataGridView4.CurrentRow.Index;
+                DataGridViewRow dgvr_1 = dataGridView4.CurrentRow;
 
-                    stock.Rows[rowIndex_1]["ST_REMAIN"] = quant_result_int.ToString();
+                // 선택한 Row의 데이터를 가져온다.
+                DataRow row_3 = (dgvr_1.DataBoundItem as DataRowView).Row;
 
-                    
+                row_3["ST_REMAIN"] = quant_result_int.ToString();
+
 
                     pURCHASETableAdapter.Update(managef1.PURCHASE);
                     pURCHASETableAdapter.Fill(managef1.PURCHASE);
@@ -231,8 +234,8 @@ namespace Market_final_exam
                     sTOCKTableAdapter.Update(managef1.STOCK);
                     sTOCKTableAdapter.Fill(managef1.STOCK);
 
-                    rEFUNDTableAdapter.Update(managef3.REFUND);
-                    rEFUNDTableAdapter.Fill(managef3.REFUND);
+                    rEFUNDTableAdapter.Update(managef1.REFUND);
+                    rEFUNDTableAdapter.Fill(managef1.REFUND);
 
                     MessageBox.Show("환불승인이 정상적으로 처리되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                

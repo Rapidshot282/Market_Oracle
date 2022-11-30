@@ -180,6 +180,7 @@ namespace Market_final_exam
 
                 stockTableAdapter1.Update(managef1.STOCK);
                 stockTableAdapter1.Fill(managef1.STOCK);
+                stockTableAdapter1.Fill(managef.STOCK);
                 MessageBox.Show("변동사항이 저장되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
@@ -344,17 +345,44 @@ namespace Market_final_exam
         {
             if (MessageBox.Show("상품 입고사항을 저장하시겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                string pu_quant = "";
+                string bf_quant_st = "";
+                string af_quant_st = "";
+                int bf_quant = 0;
+                int af_quant = 0;
+                int quant_result_int = 0;
+                string quant_result = "";
+
                 DataRow[] selected;
 
                 selected = managef1.STOCK.Select("ST_ID = " + st_id_st);
 
                 foreach (DataRow row in selected)
                 {
-                    row["ST_REMAIN"] = textBox3.Text.ToString();
+                    bf_quant_st = row["ST_REMAIN"].ToString();
+                }
+
+                af_quant_st = textBox3.Text.ToString();
+
+                bf_quant = int.Parse(bf_quant_st);
+                af_quant = int.Parse(af_quant_st);
+
+                quant_result_int = bf_quant + af_quant;
+
+                quant_result = quant_result_int.ToString();
+
+                DataRow[] selected2;
+
+                selected2 = managef1.STOCK.Select("ST_ID = " + st_id_st);
+
+                foreach (DataRow row in selected2)
+                {
+                    row["ST_REMAIN"] = quant_result;
                 }
 
                 stockTableAdapter1.Update(managef1.STOCK);
                 stockTableAdapter1.Fill(managef1.STOCK);
+                stockTableAdapter1.Fill(managef.STOCK);
 
                 MessageBox.Show("변동사항이 저장되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -402,6 +430,7 @@ namespace Market_final_exam
 
                 stockTableAdapter1.Update(managef1.STOCK);
                 stockTableAdapter1.Fill(managef1.STOCK);
+                stockTableAdapter1.Fill(managef.STOCK);
 
                 MessageBox.Show("신규상품이 입고되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -409,6 +438,13 @@ namespace Market_final_exam
             {
                 MessageBox.Show("신규상품 입고가 취소되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Chart_refund_top5 showFrom15 = new Chart_refund_top5();
+
+            showFrom15.ShowDialog();
         }
     }
 }

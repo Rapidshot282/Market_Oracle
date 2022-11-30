@@ -156,7 +156,7 @@ namespace Market_final_exam
             pd_num = "";
             stock_price = "";
             mar_id = "";
-            string mart_eq = "";
+            string st_remain = "";
             
             DataGridViewRow dgvr = dataGridView4.CurrentRow;
 
@@ -182,9 +182,11 @@ namespace Market_final_exam
             {
                 stock_price = row1["M_PRICE"].ToString();
                 st_id_1 = row1["ST_ID"].ToString();
+                st_remain = row1["ST_REMAIN"].ToString();
             }
 
             textBox4.Text = stock_price + "원";
+            textBox7.Text = st_remain;
             stock_price_int = int.Parse(stock_price);
             
 
@@ -222,6 +224,7 @@ namespace Market_final_exam
                 textBox3.Clear();
                 textBox4.Clear();
                 textBox6.Clear();
+                textBox7.Clear();
 
                 MessageBox.Show("장바구니에 추가했습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
