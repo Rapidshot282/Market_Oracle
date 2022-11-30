@@ -89,6 +89,9 @@ namespace Market_final_exam
             registerTableAdapter1.Fill(rcdata1.REGISTER);
             register = rcdata1.Tables["REGISTER"];
 
+            refundTableAdapter1.Fill(managef.REFUND);
+            refund = managef.Tables["REFUND"];
+
             listBox1.Items.Clear();
 
             foreach (DataRow row in market.Rows)
@@ -445,6 +448,22 @@ namespace Market_final_exam
             Chart_refund_top5 showFrom15 = new Chart_refund_top5();
 
             showFrom15.ShowDialog();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("로그아웃 하시겠습니까?", "쑤야유통 로그인서비스", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MessageBox.Show("로그아웃 되었습니다.", "쑤야유통 로그인서비스", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Login showForm_1 = new Login();
+                this.Hide();
+                showForm_1.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("로그아웃이 취소되었습니다.", "쑤야유통 로그인서비스", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

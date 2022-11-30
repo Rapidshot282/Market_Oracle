@@ -37,7 +37,7 @@ namespace Market_final_exam
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(240, 74);
+            this.button1.Location = new System.Drawing.Point(172, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 20);
             this.button1.TabIndex = 22;
@@ -50,9 +50,9 @@ namespace Market_final_exam
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.Location = new System.Drawing.Point(23, 74);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(211, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(143, 19);
             this.metroLabel17.TabIndex = 21;
-            this.metroLabel17.Text = "현재까지의 상품 환불순위 TOP 5";
+            this.metroLabel17.Text = "현재까지의 상품 환불";
             // 
             // oracleConnection1
             // 
@@ -73,7 +73,7 @@ namespace Market_final_exam
             this.Controls.Add(this.button1);
             this.Controls.Add(this.metroLabel17);
             this.Name = "Chart_refund_top5";
-            this.Text = "환불순위현황_Top5";
+            this.Text = "환불현황(물건)";
             this.Load += new System.EventHandler(this.Chart_refund_top5_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -81,9 +81,17 @@ namespace Market_final_exam
             this.sTOCKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.managef1 = new Market_final_exam.Managef();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.sTOCKREFUNDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sTOCKBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.managef3 = new Market_final_exam.Managef();
+            this.rEFIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rEFSTATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.rEFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pUQUANTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDDETAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rEFDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rEFUNDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.pIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,22 +104,15 @@ namespace Market_final_exam
             this.sTIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pDATEDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTOCKPURCHASEBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sTOCKREFUNDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTOCKBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.managef3 = new Market_final_exam.Managef();
             this.sTOCKPURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rEFUNDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pURCHASETableAdapter = new Market_final_exam.ManagefTableAdapters.PURCHASETableAdapter();
             this.rEFUNDTableAdapter = new Market_final_exam.ManagefTableAdapters.REFUNDTableAdapter();
             this.sTOCKTableAdapter = new Market_final_exam.ManagefTableAdapters.STOCKTableAdapter();
-            this.rEFIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rEFSTATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.rEFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pUQUANTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pDDETAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rEFDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button12 = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
@@ -125,13 +126,13 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managef1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTOCKPURCHASEBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKREFUNDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managef3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sTOCKPURCHASEBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKPURCHASEBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -661,20 +662,86 @@ namespace Market_final_exam
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // sTOCKREFUNDBindingSource
+            // rEFIDDataGridViewTextBoxColumn
             // 
-            this.sTOCKREFUNDBindingSource.DataMember = "STOCK_REFUND";
-            this.sTOCKREFUNDBindingSource.DataSource = this.sTOCKBindingSource2;
+            this.rEFIDDataGridViewTextBoxColumn.DataPropertyName = "REF_ID";
+            this.rEFIDDataGridViewTextBoxColumn.HeaderText = "환불번호";
+            this.rEFIDDataGridViewTextBoxColumn.Name = "rEFIDDataGridViewTextBoxColumn";
+            this.rEFIDDataGridViewTextBoxColumn.Width = 85;
             // 
-            // sTOCKBindingSource2
+            // pIDDataGridViewTextBoxColumn
             // 
-            this.sTOCKBindingSource2.DataMember = "STOCK";
-            this.sTOCKBindingSource2.DataSource = this.managef3;
+            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "P_ID";
+            this.pIDDataGridViewTextBoxColumn.HeaderText = "구매번호";
+            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
+            this.pIDDataGridViewTextBoxColumn.Width = 85;
             // 
-            // managef3
+            // cIDDataGridViewTextBoxColumn
             // 
-            this.managef3.DataSetName = "Managef";
-            this.managef3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cIDDataGridViewTextBoxColumn.DataPropertyName = "C_ID";
+            this.cIDDataGridViewTextBoxColumn.HeaderText = "고객";
+            this.cIDDataGridViewTextBoxColumn.Name = "cIDDataGridViewTextBoxColumn";
+            this.cIDDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // sTIDDataGridViewTextBoxColumn2
+            // 
+            this.sTIDDataGridViewTextBoxColumn2.DataPropertyName = "ST_ID";
+            this.sTIDDataGridViewTextBoxColumn2.HeaderText = "재고번호";
+            this.sTIDDataGridViewTextBoxColumn2.Name = "sTIDDataGridViewTextBoxColumn2";
+            this.sTIDDataGridViewTextBoxColumn2.Width = 85;
+            // 
+            // rEFSTATEDataGridViewTextBoxColumn
+            // 
+            this.rEFSTATEDataGridViewTextBoxColumn.DataPropertyName = "REF_STATE";
+            this.rEFSTATEDataGridViewTextBoxColumn.HeaderText = "상태";
+            this.rEFSTATEDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "환불요청",
+            "환불승인",
+            "환불거절"});
+            this.rEFSTATEDataGridViewTextBoxColumn.Name = "rEFSTATEDataGridViewTextBoxColumn";
+            this.rEFSTATEDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.rEFSTATEDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.rEFSTATEDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // rEFPRICEDataGridViewTextBoxColumn
+            // 
+            this.rEFPRICEDataGridViewTextBoxColumn.DataPropertyName = "REF_PRICE";
+            this.rEFPRICEDataGridViewTextBoxColumn.HeaderText = "환불금액";
+            this.rEFPRICEDataGridViewTextBoxColumn.Name = "rEFPRICEDataGridViewTextBoxColumn";
+            this.rEFPRICEDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // wIDDataGridViewTextBoxColumn1
+            // 
+            this.wIDDataGridViewTextBoxColumn1.DataPropertyName = "W_ID";
+            this.wIDDataGridViewTextBoxColumn1.HeaderText = "직원번호";
+            this.wIDDataGridViewTextBoxColumn1.Name = "wIDDataGridViewTextBoxColumn1";
+            this.wIDDataGridViewTextBoxColumn1.Width = 85;
+            // 
+            // pUQUANTDataGridViewTextBoxColumn
+            // 
+            this.pUQUANTDataGridViewTextBoxColumn.DataPropertyName = "PU_QUANT";
+            this.pUQUANTDataGridViewTextBoxColumn.HeaderText = "수량";
+            this.pUQUANTDataGridViewTextBoxColumn.Name = "pUQUANTDataGridViewTextBoxColumn";
+            this.pUQUANTDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // pDDETAILDataGridViewTextBoxColumn
+            // 
+            this.pDDETAILDataGridViewTextBoxColumn.DataPropertyName = "PD_DETAIL";
+            this.pDDETAILDataGridViewTextBoxColumn.HeaderText = "등록코드";
+            this.pDDETAILDataGridViewTextBoxColumn.Name = "pDDETAILDataGridViewTextBoxColumn";
+            this.pDDETAILDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // rEFDATEDataGridViewTextBoxColumn
+            // 
+            this.rEFDATEDataGridViewTextBoxColumn.DataPropertyName = "REF_DATE";
+            this.rEFDATEDataGridViewTextBoxColumn.HeaderText = "날짜";
+            this.rEFDATEDataGridViewTextBoxColumn.Name = "rEFDATEDataGridViewTextBoxColumn";
+            this.rEFDATEDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // rEFUNDBindingSource
+            // 
+            this.rEFUNDBindingSource.DataMember = "REFUND";
+            this.rEFUNDBindingSource.DataSource = this.managef1;
             // 
             // dataGridView2
             // 
@@ -803,15 +870,25 @@ namespace Market_final_exam
             this.sTOCKPURCHASEBindingSource1.DataMember = "STOCK_PURCHASE";
             this.sTOCKPURCHASEBindingSource1.DataSource = this.sTOCKBindingSource;
             // 
+            // sTOCKREFUNDBindingSource
+            // 
+            this.sTOCKREFUNDBindingSource.DataMember = "STOCK_REFUND";
+            this.sTOCKREFUNDBindingSource.DataSource = this.sTOCKBindingSource2;
+            // 
+            // sTOCKBindingSource2
+            // 
+            this.sTOCKBindingSource2.DataMember = "STOCK";
+            this.sTOCKBindingSource2.DataSource = this.managef3;
+            // 
+            // managef3
+            // 
+            this.managef3.DataSetName = "Managef";
+            this.managef3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // sTOCKPURCHASEBindingSource
             // 
             this.sTOCKPURCHASEBindingSource.DataMember = "STOCK_PURCHASE";
             this.sTOCKPURCHASEBindingSource.DataSource = this.sTOCKBindingSource;
-            // 
-            // rEFUNDBindingSource
-            // 
-            this.rEFUNDBindingSource.DataMember = "REFUND";
-            this.rEFUNDBindingSource.DataSource = this.managef1;
             // 
             // pURCHASEBindingSource
             // 
@@ -830,81 +907,15 @@ namespace Market_final_exam
             // 
             this.sTOCKTableAdapter.ClearBeforeFill = true;
             // 
-            // rEFIDDataGridViewTextBoxColumn
+            // button12
             // 
-            this.rEFIDDataGridViewTextBoxColumn.DataPropertyName = "REF_ID";
-            this.rEFIDDataGridViewTextBoxColumn.HeaderText = "환불번호";
-            this.rEFIDDataGridViewTextBoxColumn.Name = "rEFIDDataGridViewTextBoxColumn";
-            this.rEFIDDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // pIDDataGridViewTextBoxColumn
-            // 
-            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "P_ID";
-            this.pIDDataGridViewTextBoxColumn.HeaderText = "구매번호";
-            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
-            this.pIDDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // cIDDataGridViewTextBoxColumn
-            // 
-            this.cIDDataGridViewTextBoxColumn.DataPropertyName = "C_ID";
-            this.cIDDataGridViewTextBoxColumn.HeaderText = "고객";
-            this.cIDDataGridViewTextBoxColumn.Name = "cIDDataGridViewTextBoxColumn";
-            this.cIDDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // sTIDDataGridViewTextBoxColumn2
-            // 
-            this.sTIDDataGridViewTextBoxColumn2.DataPropertyName = "ST_ID";
-            this.sTIDDataGridViewTextBoxColumn2.HeaderText = "재고번호";
-            this.sTIDDataGridViewTextBoxColumn2.Name = "sTIDDataGridViewTextBoxColumn2";
-            this.sTIDDataGridViewTextBoxColumn2.Width = 85;
-            // 
-            // rEFSTATEDataGridViewTextBoxColumn
-            // 
-            this.rEFSTATEDataGridViewTextBoxColumn.DataPropertyName = "REF_STATE";
-            this.rEFSTATEDataGridViewTextBoxColumn.HeaderText = "상태";
-            this.rEFSTATEDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "환불요청",
-            "환불승인",
-            "환불거절"});
-            this.rEFSTATEDataGridViewTextBoxColumn.Name = "rEFSTATEDataGridViewTextBoxColumn";
-            this.rEFSTATEDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.rEFSTATEDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.rEFSTATEDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // rEFPRICEDataGridViewTextBoxColumn
-            // 
-            this.rEFPRICEDataGridViewTextBoxColumn.DataPropertyName = "REF_PRICE";
-            this.rEFPRICEDataGridViewTextBoxColumn.HeaderText = "환불금액";
-            this.rEFPRICEDataGridViewTextBoxColumn.Name = "rEFPRICEDataGridViewTextBoxColumn";
-            this.rEFPRICEDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // wIDDataGridViewTextBoxColumn1
-            // 
-            this.wIDDataGridViewTextBoxColumn1.DataPropertyName = "W_ID";
-            this.wIDDataGridViewTextBoxColumn1.HeaderText = "직원번호";
-            this.wIDDataGridViewTextBoxColumn1.Name = "wIDDataGridViewTextBoxColumn1";
-            this.wIDDataGridViewTextBoxColumn1.Width = 85;
-            // 
-            // pUQUANTDataGridViewTextBoxColumn
-            // 
-            this.pUQUANTDataGridViewTextBoxColumn.DataPropertyName = "PU_QUANT";
-            this.pUQUANTDataGridViewTextBoxColumn.HeaderText = "수량";
-            this.pUQUANTDataGridViewTextBoxColumn.Name = "pUQUANTDataGridViewTextBoxColumn";
-            this.pUQUANTDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // pDDETAILDataGridViewTextBoxColumn
-            // 
-            this.pDDETAILDataGridViewTextBoxColumn.DataPropertyName = "PD_DETAIL";
-            this.pDDETAILDataGridViewTextBoxColumn.HeaderText = "등록코드";
-            this.pDDETAILDataGridViewTextBoxColumn.Name = "pDDETAILDataGridViewTextBoxColumn";
-            this.pDDETAILDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // rEFDATEDataGridViewTextBoxColumn
-            // 
-            this.rEFDATEDataGridViewTextBoxColumn.DataPropertyName = "REF_DATE";
-            this.rEFDATEDataGridViewTextBoxColumn.HeaderText = "날짜";
-            this.rEFDATEDataGridViewTextBoxColumn.Name = "rEFDATEDataGridViewTextBoxColumn";
-            this.rEFDATEDataGridViewTextBoxColumn.Width = 175;
+            this.button12.Location = new System.Drawing.Point(146, 25);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 4;
+            this.button12.Text = "로그아웃";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Worker
             // 
@@ -912,6 +923,7 @@ namespace Market_final_exam
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1058, 584);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "Worker";
             this.Text = "쑤야유통";
@@ -931,13 +943,13 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managef1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTOCKPURCHASEBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKREFUNDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managef3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sTOCKPURCHASEBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKPURCHASEBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1027,5 +1039,6 @@ namespace Market_final_exam
         private System.Windows.Forms.DataGridViewTextBoxColumn pUQUANTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pDDETAILDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rEFDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button12;
     }
 }

@@ -58,7 +58,7 @@ namespace Market_final_exam
         private void add_data_st_ch()
         {
 
-            oracleCommand1.CommandText = "SELECT REFUND.REF_DATE as 날짜, SUM(REFUND.REF_price) as 환불액 FROM REFUND WHERE REFUND.REF_date = '" + date +"' GROUP BY REFUND.REF_date";
+            oracleCommand1.CommandText = "SELECT REFUND.REF_DATE as 날짜, SUM(REFUND.REF_price) as 환불액 FROM REFUND WHERE REFUND.REF_date = '" + date +"' AND REF_STATE = '환불승인' GROUP BY REFUND.REF_date";
 
             OracleDataReader rdr = oracleCommand1.ExecuteReader();
 
@@ -77,7 +77,7 @@ namespace Market_final_exam
             oracleConnection1.Open();
 
             string refund_cost = "";
-            oracleCommand2.CommandText = "SELECT REFUND.REF_DATE as 날짜, SUM(REFUND.REF_price) as 환불액 FROM REFUND WHERE REFUND.REF_date = '" + date + "' GROUP BY REFUND.REF_date";
+            oracleCommand2.CommandText = "SELECT REFUND.REF_DATE as 날짜, SUM(REFUND.REF_price) as 환불액 FROM REFUND WHERE REFUND.REF_date = '" + date + "' AND REF_STATE = '환불승인 GROUP BY REFUND.REF_date";
 
             OracleDataReader rdr2 = oracleCommand1.ExecuteReader();
 

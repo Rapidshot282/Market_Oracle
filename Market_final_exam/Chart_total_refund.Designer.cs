@@ -43,20 +43,19 @@ namespace Market_final_exam
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(465, 79);
+            this.label1.Location = new System.Drawing.Point(475, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 12);
+            this.label1.Size = new System.Drawing.Size(0, 12);
             this.label1.TabIndex = 34;
-            this.label1.Text = "label1";
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(397, 75);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(62, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(76, 19);
             this.metroLabel1.TabIndex = 33;
-            this.metroLabel1.Text = "총 매출 :";
+            this.metroLabel1.Text = "총 환불액 :";
             // 
             // button2
             // 

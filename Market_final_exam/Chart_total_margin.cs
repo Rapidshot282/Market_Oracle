@@ -58,7 +58,7 @@ namespace Market_final_exam
         private void add_data_st_ch()
         {
            
-            oracleCommand1.CommandText = "SELECT purchase.p_date as 날짜, SUM(purchase.p_price) as 매출 FROM PURCHASE WHERE purchase.p_date = '" + date +"' GROUP BY purchase.p_date";
+            oracleCommand1.CommandText = "SELECT purchase.p_date as 날짜, SUM(purchase.p_price) as 매출 FROM PURCHASE WHERE purchase.p_date = '" + date +"' AND P_STATE = '구매승인' GROUP BY purchase.p_date";
 
             OracleDataReader rdr = oracleCommand1.ExecuteReader();
 
@@ -77,7 +77,7 @@ namespace Market_final_exam
             oracleConnection1.Open();
 
             string margin_cost = "";
-            oracleCommand2.CommandText = "SELECT purchase.p_date as 날짜, SUM(purchase.p_price) as 매출 FROM PURCHASE WHERE purchase.p_date = '" + date + "' GROUP BY purchase.p_date";
+            oracleCommand2.CommandText = "SELECT purchase.p_date as 날짜, SUM(purchase.p_price) as 매출 FROM PURCHASE WHERE purchase.p_date = '" + date + "' AND P_STATE = '구매승인' GROUP BY purchase.p_date";
 
             OracleDataReader rdr2 = oracleCommand1.ExecuteReader();
 

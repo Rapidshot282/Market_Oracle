@@ -30,7 +30,7 @@ namespace Market_final_exam
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.people11 = new Market_final_exam.people1();
             this.administratorTableAdapter1 = new Market_final_exam.people1TableAdapters.ADMINISTRATORTableAdapter();
             this.workerTableAdapter1 = new Market_final_exam.people1TableAdapters.WORKERTableAdapter();
@@ -53,11 +53,30 @@ namespace Market_final_exam
             this.rKINDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rEGISTERBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.rcdata1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.button11 = new System.Windows.Forms.Button();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.pURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.managef = new Market_final_exam.Managef();
+            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pRCHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDSERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRODCHANGEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.managef = new Market_final_exam.Managef();
             this.button2 = new System.Windows.Forms.Button();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -74,6 +93,8 @@ namespace Market_final_exam
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.pDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button10 = new System.Windows.Forms.Button();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
@@ -86,8 +107,13 @@ namespace Market_final_exam
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.rEFUNDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.mIDDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDSERIALDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTREMAINDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTOCKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button9 = new System.Windows.Forms.Button();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -99,28 +125,6 @@ namespace Market_final_exam
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.listBox4 = new System.Windows.Forms.ListBox();
-            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pURCHASEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.register12 = new Market_final_exam.register12();
             this.aDMINISTRATORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter1 = new Market_final_exam.RCDATATableAdapters.CUSTOMERTableAdapter();
@@ -138,34 +142,30 @@ namespace Market_final_exam
             this.replyTableAdapter1 = new Market_final_exam.ManagefTableAdapters.REPLYTableAdapter();
             this.stockTableAdapter1 = new Market_final_exam.ManagefTableAdapters.STOCKTableAdapter();
             this.mARKETBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pDNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRCHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pDSERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mIDDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pDSERIALDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTREMAINDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button11 = new System.Windows.Forms.Button();
             this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rEGISTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.rEFUNDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rEFIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rEFSTATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rEFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rEFDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pUQUANTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pDDETAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.rEFDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.people11)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage6.SuspendLayout();
@@ -175,19 +175,20 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEGISTERBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rcdata1BindingSource)).BeginInit();
+            this.metroTabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managef)).BeginInit();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODCHANGEBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managef)).BeginInit();
             this.metroTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
             this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).BeginInit();
-            this.metroTabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.register12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDMINISTRATORBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource2)).BeginInit();
@@ -196,9 +197,6 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEGISTERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.SuspendLayout();
             // 
             // people11
@@ -217,14 +215,14 @@ namespace Market_final_exam
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage6);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(12, 53);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 4;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1058, 374);
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -409,6 +407,182 @@ namespace Market_final_exam
             this.rcdata1BindingSource.DataSource = this.rcdata1;
             this.rcdata1BindingSource.Position = 0;
             // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.Controls.Add(this.metroLabel27);
+            this.metroTabPage5.Controls.Add(this.dataGridView2);
+            this.metroTabPage5.Controls.Add(this.button11);
+            this.metroTabPage5.Controls.Add(this.dataGridView5);
+            this.metroTabPage5.Controls.Add(this.metroLabel26);
+            this.metroTabPage5.Controls.Add(this.button8);
+            this.metroTabPage5.Controls.Add(this.metroLabel9);
+            this.metroTabPage5.Controls.Add(this.metroLabel8);
+            this.metroTabPage5.Controls.Add(this.button7);
+            this.metroTabPage5.Controls.Add(this.button6);
+            this.metroTabPage5.Controls.Add(this.button5);
+            this.metroTabPage5.Controls.Add(this.button4);
+            this.metroTabPage5.Controls.Add(this.button3);
+            this.metroTabPage5.Controls.Add(this.metroLabel14);
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarSize = 5;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 36);
+            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(1050, 334);
+            this.metroTabPage5.TabIndex = 4;
+            this.metroTabPage5.Text = "통계";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarSize = 5;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(573, 277);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(138, 35);
+            this.button11.TabIndex = 25;
+            this.button11.Text = "환불현황(물건)";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.AutoGenerateColumns = false;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.dataGridView5.DataSource = this.pURCHASEBindingSource;
+            this.dataGridView5.Location = new System.Drawing.Point(18, 41);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.RowHeadersVisible = false;
+            this.dataGridView5.RowTemplate.Height = 23;
+            this.dataGridView5.Size = new System.Drawing.Size(525, 143);
+            this.dataGridView5.TabIndex = 24;
+            // 
+            // pURCHASEBindingSource
+            // 
+            this.pURCHASEBindingSource.DataMember = "PURCHASE";
+            this.pURCHASEBindingSource.DataSource = this.managef;
+            // 
+            // managef
+            // 
+            this.managef.DataSetName = "Managef";
+            this.managef.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // metroLabel26
+            // 
+            this.metroLabel26.AutoSize = true;
+            this.metroLabel26.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel26.Location = new System.Drawing.Point(18, 19);
+            this.metroLabel26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel26.Name = "metroLabel26";
+            this.metroLabel26.Size = new System.Drawing.Size(97, 19);
+            this.metroLabel26.TabIndex = 23;
+            this.metroLabel26.Text = "전체 구매목록";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(882, 96);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(138, 35);
+            this.button8.TabIndex = 22;
+            this.button8.Text = "날짜별 환불현황";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel9.Location = new System.Drawing.Point(569, 64);
+            this.metroLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(107, 19);
+            this.metroLabel9.TabIndex = 21;
+            this.metroLabel9.Text = "재고, 매출, 환불";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel8.Location = new System.Drawing.Point(569, 205);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(96, 19);
+            this.metroLabel8.TabIndex = 20;
+            this.metroLabel8.Text = "판매,환불현황";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(881, 236);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(138, 35);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "판매현황(마트별)";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(573, 236);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(138, 35);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "판매현황(물건)";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(727, 96);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(138, 35);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "날짜별 매출현황";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(726, 236);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(138, 35);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "판매현황(고객)";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(573, 96);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(138, 35);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "재고현황";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel14.Location = new System.Drawing.Point(556, 19);
+            this.metroLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel14.TabIndex = 13;
+            this.metroLabel14.Text = "차트열람";
+            // 
             // metroTabPage1
             // 
             this.metroTabPage1.Controls.Add(this.metroLabel15);
@@ -466,15 +640,51 @@ namespace Market_final_exam
             this.dataGridView1.Size = new System.Drawing.Size(344, 224);
             this.dataGridView1.TabIndex = 12;
             // 
+            // pRCHIDDataGridViewTextBoxColumn
+            // 
+            this.pRCHIDDataGridViewTextBoxColumn.DataPropertyName = "PRCH_ID";
+            this.pRCHIDDataGridViewTextBoxColumn.HeaderText = "변경순서";
+            this.pRCHIDDataGridViewTextBoxColumn.Name = "pRCHIDDataGridViewTextBoxColumn";
+            this.pRCHIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pRCHIDDataGridViewTextBoxColumn.Visible = false;
+            this.pRCHIDDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // bFPRICEDataGridViewTextBoxColumn
+            // 
+            this.bFPRICEDataGridViewTextBoxColumn.DataPropertyName = "BF_PRICE";
+            this.bFPRICEDataGridViewTextBoxColumn.HeaderText = "이전가격";
+            this.bFPRICEDataGridViewTextBoxColumn.Name = "bFPRICEDataGridViewTextBoxColumn";
+            this.bFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bFPRICEDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // aFPRICEDataGridViewTextBoxColumn
+            // 
+            this.aFPRICEDataGridViewTextBoxColumn.DataPropertyName = "AF_PRICE";
+            this.aFPRICEDataGridViewTextBoxColumn.HeaderText = "변동가격";
+            this.aFPRICEDataGridViewTextBoxColumn.Name = "aFPRICEDataGridViewTextBoxColumn";
+            this.aFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aFPRICEDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // mIDDataGridViewTextBoxColumn
+            // 
+            this.mIDDataGridViewTextBoxColumn.DataPropertyName = "M_ID";
+            this.mIDDataGridViewTextBoxColumn.HeaderText = "마트번호";
+            this.mIDDataGridViewTextBoxColumn.Name = "mIDDataGridViewTextBoxColumn";
+            this.mIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mIDDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // pDSERIALDataGridViewTextBoxColumn
+            // 
+            this.pDSERIALDataGridViewTextBoxColumn.DataPropertyName = "PD_SERIAL";
+            this.pDSERIALDataGridViewTextBoxColumn.HeaderText = "등록코드";
+            this.pDSERIALDataGridViewTextBoxColumn.Name = "pDSERIALDataGridViewTextBoxColumn";
+            this.pDSERIALDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pDSERIALDataGridViewTextBoxColumn.Width = 80;
+            // 
             // pRODCHANGEBindingSource
             // 
             this.pRODCHANGEBindingSource.DataMember = "PROD_CHANGE";
             this.pRODCHANGEBindingSource.DataSource = this.managef;
-            // 
-            // managef
-            // 
-            this.managef.DataSetName = "Managef";
-            this.managef.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button2
             // 
@@ -668,6 +878,20 @@ namespace Market_final_exam
             this.dataGridView7.Size = new System.Drawing.Size(227, 226);
             this.dataGridView7.TabIndex = 34;
             // 
+            // pDIDDataGridViewTextBoxColumn
+            // 
+            this.pDIDDataGridViewTextBoxColumn.DataPropertyName = "PD_ID";
+            this.pDIDDataGridViewTextBoxColumn.HeaderText = "물품그룹번호";
+            this.pDIDDataGridViewTextBoxColumn.Name = "pDIDDataGridViewTextBoxColumn";
+            this.pDIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pDNAMEDataGridViewTextBoxColumn
+            // 
+            this.pDNAMEDataGridViewTextBoxColumn.DataPropertyName = "PD_NAME";
+            this.pDNAMEDataGridViewTextBoxColumn.HeaderText = "물품그룹명";
+            this.pDNAMEDataGridViewTextBoxColumn.Name = "pDNAMEDataGridViewTextBoxColumn";
+            this.pDNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // pRODUCTBindingSource
             // 
             this.pRODUCTBindingSource.DataMember = "PRODUCT";
@@ -781,9 +1005,6 @@ namespace Market_final_exam
             // 
             // metroTabPage3
             // 
-            this.metroTabPage3.Controls.Add(this.dataGridView9);
-            this.metroTabPage3.Controls.Add(this.dataGridView8);
-            this.metroTabPage3.Controls.Add(this.dataGridView2);
             this.metroTabPage3.Controls.Add(this.metroLabel17);
             this.metroTabPage3.Controls.Add(this.dataGridView6);
             this.metroTabPage3.Controls.Add(this.button9);
@@ -803,6 +1024,11 @@ namespace Market_final_exam
             this.metroTabPage3.TabIndex = 7;
             this.metroTabPage3.Text = "기존상품 입고";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
+            // 
+            // rEFUNDBindingSource
+            // 
+            this.rEFUNDBindingSource.DataMember = "REFUND";
+            this.rEFUNDBindingSource.DataSource = this.managef;
             // 
             // metroLabel17
             // 
@@ -834,6 +1060,38 @@ namespace Market_final_exam
             this.dataGridView6.RowTemplate.Height = 23;
             this.dataGridView6.Size = new System.Drawing.Size(267, 226);
             this.dataGridView6.TabIndex = 22;
+            // 
+            // mIDDataGridViewTextBoxColumn5
+            // 
+            this.mIDDataGridViewTextBoxColumn5.DataPropertyName = "M_ID";
+            this.mIDDataGridViewTextBoxColumn5.HeaderText = "마트번호";
+            this.mIDDataGridViewTextBoxColumn5.Name = "mIDDataGridViewTextBoxColumn5";
+            this.mIDDataGridViewTextBoxColumn5.ReadOnly = true;
+            this.mIDDataGridViewTextBoxColumn5.Width = 80;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "ST_ID";
+            this.Column1.HeaderText = "재고번호";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 80;
+            // 
+            // pDSERIALDataGridViewTextBoxColumn3
+            // 
+            this.pDSERIALDataGridViewTextBoxColumn3.DataPropertyName = "PD_SERIAL";
+            this.pDSERIALDataGridViewTextBoxColumn3.HeaderText = "물품코드";
+            this.pDSERIALDataGridViewTextBoxColumn3.Name = "pDSERIALDataGridViewTextBoxColumn3";
+            this.pDSERIALDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.pDSERIALDataGridViewTextBoxColumn3.Width = 80;
+            // 
+            // sTREMAINDataGridViewTextBoxColumn1
+            // 
+            this.sTREMAINDataGridViewTextBoxColumn1.DataPropertyName = "ST_REMAIN";
+            this.sTREMAINDataGridViewTextBoxColumn1.HeaderText = "재고량";
+            this.sTREMAINDataGridViewTextBoxColumn1.Name = "sTREMAINDataGridViewTextBoxColumn1";
+            this.sTREMAINDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.sTREMAINDataGridViewTextBoxColumn1.Width = 80;
             // 
             // sTOCKBindingSource
             // 
@@ -948,231 +1206,6 @@ namespace Market_final_exam
             this.listBox4.TabIndex = 12;
             this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
-            // metroTabPage5
-            // 
-            this.metroTabPage5.Controls.Add(this.button11);
-            this.metroTabPage5.Controls.Add(this.dataGridView5);
-            this.metroTabPage5.Controls.Add(this.metroLabel26);
-            this.metroTabPage5.Controls.Add(this.button8);
-            this.metroTabPage5.Controls.Add(this.metroLabel9);
-            this.metroTabPage5.Controls.Add(this.metroLabel8);
-            this.metroTabPage5.Controls.Add(this.button7);
-            this.metroTabPage5.Controls.Add(this.button6);
-            this.metroTabPage5.Controls.Add(this.button5);
-            this.metroTabPage5.Controls.Add(this.button4);
-            this.metroTabPage5.Controls.Add(this.button3);
-            this.metroTabPage5.Controls.Add(this.metroLabel14);
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.HorizontalScrollbarSize = 5;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 36);
-            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(1050, 334);
-            this.metroTabPage5.TabIndex = 4;
-            this.metroTabPage5.Text = "통계";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            this.metroTabPage5.VerticalScrollbarSize = 5;
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.AllowUserToAddRows = false;
-            this.dataGridView5.AllowUserToDeleteRows = false;
-            this.dataGridView5.AutoGenerateColumns = false;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.dataGridView5.DataSource = this.pURCHASEBindingSource;
-            this.dataGridView5.Location = new System.Drawing.Point(18, 41);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.ReadOnly = true;
-            this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.RowTemplate.Height = 23;
-            this.dataGridView5.Size = new System.Drawing.Size(525, 143);
-            this.dataGridView5.TabIndex = 24;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "P_ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "구매ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "C_ID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "고객ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "M_ID";
-            this.dataGridViewTextBoxColumn3.HeaderText = "마트번호";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PD_SERIAL";
-            this.dataGridViewTextBoxColumn4.HeaderText = "분류코드";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "PU_QUANT";
-            this.dataGridViewTextBoxColumn5.HeaderText = "수량";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "P_PRICE";
-            this.dataGridViewTextBoxColumn6.HeaderText = "가격";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "P_STATE";
-            this.dataGridViewTextBoxColumn7.HeaderText = "상태";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "W_ID";
-            this.dataGridViewTextBoxColumn8.HeaderText = "승인직원번호";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "P_DATE";
-            dataGridViewCellStyle2.Format = "D";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn9.HeaderText = "날짜";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // pURCHASEBindingSource
-            // 
-            this.pURCHASEBindingSource.DataMember = "PURCHASE";
-            this.pURCHASEBindingSource.DataSource = this.managef;
-            // 
-            // metroLabel26
-            // 
-            this.metroLabel26.AutoSize = true;
-            this.metroLabel26.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel26.Location = new System.Drawing.Point(18, 19);
-            this.metroLabel26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(97, 19);
-            this.metroLabel26.TabIndex = 23;
-            this.metroLabel26.Text = "전체 구매목록";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(882, 96);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(138, 35);
-            this.button8.TabIndex = 22;
-            this.button8.Text = "날짜별 환불현황";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel9.Location = new System.Drawing.Point(569, 64);
-            this.metroLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(107, 19);
-            this.metroLabel9.TabIndex = 21;
-            this.metroLabel9.Text = "재고, 매출, 환불";
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.Location = new System.Drawing.Point(569, 205);
-            this.metroLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(134, 19);
-            this.metroLabel8.TabIndex = 20;
-            this.metroLabel8.Text = "순위현황(상위TOP5)";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(881, 236);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(138, 35);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "판매순위현황(마트별)";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(573, 236);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 35);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "판매순위현황(물건)";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(727, 96);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(138, 35);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "날짜별 매출현황";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(726, 236);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 35);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "판매순위현황(고객)";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(573, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 35);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "재고현황";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel14.Location = new System.Drawing.Point(556, 19);
-            this.metroLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel14.TabIndex = 13;
-            this.metroLabel14.Text = "차트열람";
-            // 
             // register12
             // 
             this.register12.DataSetName = "register12";
@@ -1249,103 +1282,6 @@ namespace Market_final_exam
             this.mARKETBindingSource.DataMember = "MARKET";
             this.mARKETBindingSource.DataSource = this.managef1;
             // 
-            // pDIDDataGridViewTextBoxColumn
-            // 
-            this.pDIDDataGridViewTextBoxColumn.DataPropertyName = "PD_ID";
-            this.pDIDDataGridViewTextBoxColumn.HeaderText = "물품그룹번호";
-            this.pDIDDataGridViewTextBoxColumn.Name = "pDIDDataGridViewTextBoxColumn";
-            this.pDIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pDNAMEDataGridViewTextBoxColumn
-            // 
-            this.pDNAMEDataGridViewTextBoxColumn.DataPropertyName = "PD_NAME";
-            this.pDNAMEDataGridViewTextBoxColumn.HeaderText = "물품그룹명";
-            this.pDNAMEDataGridViewTextBoxColumn.Name = "pDNAMEDataGridViewTextBoxColumn";
-            this.pDNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pRCHIDDataGridViewTextBoxColumn
-            // 
-            this.pRCHIDDataGridViewTextBoxColumn.DataPropertyName = "PRCH_ID";
-            this.pRCHIDDataGridViewTextBoxColumn.HeaderText = "변경순서";
-            this.pRCHIDDataGridViewTextBoxColumn.Name = "pRCHIDDataGridViewTextBoxColumn";
-            this.pRCHIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pRCHIDDataGridViewTextBoxColumn.Visible = false;
-            this.pRCHIDDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // bFPRICEDataGridViewTextBoxColumn
-            // 
-            this.bFPRICEDataGridViewTextBoxColumn.DataPropertyName = "BF_PRICE";
-            this.bFPRICEDataGridViewTextBoxColumn.HeaderText = "이전가격";
-            this.bFPRICEDataGridViewTextBoxColumn.Name = "bFPRICEDataGridViewTextBoxColumn";
-            this.bFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bFPRICEDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // aFPRICEDataGridViewTextBoxColumn
-            // 
-            this.aFPRICEDataGridViewTextBoxColumn.DataPropertyName = "AF_PRICE";
-            this.aFPRICEDataGridViewTextBoxColumn.HeaderText = "변동가격";
-            this.aFPRICEDataGridViewTextBoxColumn.Name = "aFPRICEDataGridViewTextBoxColumn";
-            this.aFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aFPRICEDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // mIDDataGridViewTextBoxColumn
-            // 
-            this.mIDDataGridViewTextBoxColumn.DataPropertyName = "M_ID";
-            this.mIDDataGridViewTextBoxColumn.HeaderText = "마트번호";
-            this.mIDDataGridViewTextBoxColumn.Name = "mIDDataGridViewTextBoxColumn";
-            this.mIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mIDDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // pDSERIALDataGridViewTextBoxColumn
-            // 
-            this.pDSERIALDataGridViewTextBoxColumn.DataPropertyName = "PD_SERIAL";
-            this.pDSERIALDataGridViewTextBoxColumn.HeaderText = "등록코드";
-            this.pDSERIALDataGridViewTextBoxColumn.Name = "pDSERIALDataGridViewTextBoxColumn";
-            this.pDSERIALDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pDSERIALDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // mIDDataGridViewTextBoxColumn5
-            // 
-            this.mIDDataGridViewTextBoxColumn5.DataPropertyName = "M_ID";
-            this.mIDDataGridViewTextBoxColumn5.HeaderText = "마트번호";
-            this.mIDDataGridViewTextBoxColumn5.Name = "mIDDataGridViewTextBoxColumn5";
-            this.mIDDataGridViewTextBoxColumn5.ReadOnly = true;
-            this.mIDDataGridViewTextBoxColumn5.Width = 80;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "ST_ID";
-            this.Column1.HeaderText = "재고번호";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 80;
-            // 
-            // pDSERIALDataGridViewTextBoxColumn3
-            // 
-            this.pDSERIALDataGridViewTextBoxColumn3.DataPropertyName = "PD_SERIAL";
-            this.pDSERIALDataGridViewTextBoxColumn3.HeaderText = "물품코드";
-            this.pDSERIALDataGridViewTextBoxColumn3.Name = "pDSERIALDataGridViewTextBoxColumn3";
-            this.pDSERIALDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.pDSERIALDataGridViewTextBoxColumn3.Width = 80;
-            // 
-            // sTREMAINDataGridViewTextBoxColumn1
-            // 
-            this.sTREMAINDataGridViewTextBoxColumn1.DataPropertyName = "ST_REMAIN";
-            this.sTREMAINDataGridViewTextBoxColumn1.HeaderText = "재고량";
-            this.sTREMAINDataGridViewTextBoxColumn1.Name = "sTREMAINDataGridViewTextBoxColumn1";
-            this.sTREMAINDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.sTREMAINDataGridViewTextBoxColumn1.Width = 80;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(573, 277);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(138, 35);
-            this.button11.TabIndex = 25;
-            this.button11.Text = "환불순위현황(물건)";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -1358,111 +1294,176 @@ namespace Market_final_exam
             this.cIDDataGridViewTextBoxColumn1,
             this.rEFSTATEDataGridViewTextBoxColumn,
             this.rEFPRICEDataGridViewTextBoxColumn,
-            this.rEFDATEDataGridViewTextBoxColumn,
-            this.wIDDataGridViewTextBoxColumn,
             this.pUQUANTDataGridViewTextBoxColumn,
             this.pDDETAILDataGridViewTextBoxColumn,
-            this.sTIDDataGridViewTextBoxColumn});
+            this.wIDDataGridViewTextBoxColumn,
+            this.sTIDDataGridViewTextBoxColumn,
+            this.rEFDATEDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.rEFUNDBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 197);
+            this.dataGridView2.Location = new System.Drawing.Point(18, 209);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(525, 125);
+            this.dataGridView2.TabIndex = 26;
             // 
-            // rEFUNDBindingSource
+            // metroLabel27
             // 
-            this.rEFUNDBindingSource.DataMember = "REFUND";
-            this.rEFUNDBindingSource.DataSource = this.managef;
+            this.metroLabel27.AutoSize = true;
+            this.metroLabel27.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel27.Location = new System.Drawing.Point(18, 187);
+            this.metroLabel27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel27.Name = "metroLabel27";
+            this.metroLabel27.Size = new System.Drawing.Size(97, 19);
+            this.metroLabel27.TabIndex = 27;
+            this.metroLabel27.Text = "전체 환불목록";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "P_ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "구매번호";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "C_ID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "고객";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "M_ID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "마트번호";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PD_SERIAL";
+            this.dataGridViewTextBoxColumn4.HeaderText = "분류코드";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "PU_QUANT";
+            this.dataGridViewTextBoxColumn5.HeaderText = "수량";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "P_PRICE";
+            this.dataGridViewTextBoxColumn6.HeaderText = "가격";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "P_STATE";
+            this.dataGridViewTextBoxColumn7.HeaderText = "상태";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "W_ID";
+            this.dataGridViewTextBoxColumn8.HeaderText = "승인직원번호";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "P_DATE";
+            dataGridViewCellStyle5.Format = "D";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn9.HeaderText = "날짜";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // rEFIDDataGridViewTextBoxColumn
             // 
             this.rEFIDDataGridViewTextBoxColumn.DataPropertyName = "REF_ID";
-            this.rEFIDDataGridViewTextBoxColumn.HeaderText = "REF_ID";
+            this.rEFIDDataGridViewTextBoxColumn.HeaderText = "환불번호";
             this.rEFIDDataGridViewTextBoxColumn.Name = "rEFIDDataGridViewTextBoxColumn";
             this.rEFIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // pIDDataGridViewTextBoxColumn
             // 
             this.pIDDataGridViewTextBoxColumn.DataPropertyName = "P_ID";
-            this.pIDDataGridViewTextBoxColumn.HeaderText = "P_ID";
+            this.pIDDataGridViewTextBoxColumn.HeaderText = "구매번호";
             this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
             this.pIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cIDDataGridViewTextBoxColumn1
             // 
             this.cIDDataGridViewTextBoxColumn1.DataPropertyName = "C_ID";
-            this.cIDDataGridViewTextBoxColumn1.HeaderText = "C_ID";
+            this.cIDDataGridViewTextBoxColumn1.HeaderText = "고객";
             this.cIDDataGridViewTextBoxColumn1.Name = "cIDDataGridViewTextBoxColumn1";
             this.cIDDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // rEFSTATEDataGridViewTextBoxColumn
             // 
             this.rEFSTATEDataGridViewTextBoxColumn.DataPropertyName = "REF_STATE";
-            this.rEFSTATEDataGridViewTextBoxColumn.HeaderText = "REF_STATE";
+            this.rEFSTATEDataGridViewTextBoxColumn.HeaderText = "상태";
             this.rEFSTATEDataGridViewTextBoxColumn.Name = "rEFSTATEDataGridViewTextBoxColumn";
             this.rEFSTATEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rEFPRICEDataGridViewTextBoxColumn
             // 
             this.rEFPRICEDataGridViewTextBoxColumn.DataPropertyName = "REF_PRICE";
-            this.rEFPRICEDataGridViewTextBoxColumn.HeaderText = "REF_PRICE";
+            this.rEFPRICEDataGridViewTextBoxColumn.HeaderText = "금액";
             this.rEFPRICEDataGridViewTextBoxColumn.Name = "rEFPRICEDataGridViewTextBoxColumn";
             this.rEFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rEFDATEDataGridViewTextBoxColumn
-            // 
-            this.rEFDATEDataGridViewTextBoxColumn.DataPropertyName = "REF_DATE";
-            this.rEFDATEDataGridViewTextBoxColumn.HeaderText = "REF_DATE";
-            this.rEFDATEDataGridViewTextBoxColumn.Name = "rEFDATEDataGridViewTextBoxColumn";
-            this.rEFDATEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // wIDDataGridViewTextBoxColumn
-            // 
-            this.wIDDataGridViewTextBoxColumn.DataPropertyName = "W_ID";
-            this.wIDDataGridViewTextBoxColumn.HeaderText = "W_ID";
-            this.wIDDataGridViewTextBoxColumn.Name = "wIDDataGridViewTextBoxColumn";
-            this.wIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // pUQUANTDataGridViewTextBoxColumn
             // 
             this.pUQUANTDataGridViewTextBoxColumn.DataPropertyName = "PU_QUANT";
-            this.pUQUANTDataGridViewTextBoxColumn.HeaderText = "PU_QUANT";
+            this.pUQUANTDataGridViewTextBoxColumn.HeaderText = "수량";
             this.pUQUANTDataGridViewTextBoxColumn.Name = "pUQUANTDataGridViewTextBoxColumn";
             this.pUQUANTDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // pDDETAILDataGridViewTextBoxColumn
             // 
             this.pDDETAILDataGridViewTextBoxColumn.DataPropertyName = "PD_DETAIL";
-            this.pDDETAILDataGridViewTextBoxColumn.HeaderText = "PD_DETAIL";
+            this.pDDETAILDataGridViewTextBoxColumn.HeaderText = "등록코드";
             this.pDDETAILDataGridViewTextBoxColumn.Name = "pDDETAILDataGridViewTextBoxColumn";
             this.pDDETAILDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // wIDDataGridViewTextBoxColumn
+            // 
+            this.wIDDataGridViewTextBoxColumn.DataPropertyName = "W_ID";
+            this.wIDDataGridViewTextBoxColumn.HeaderText = "승인직원번호";
+            this.wIDDataGridViewTextBoxColumn.Name = "wIDDataGridViewTextBoxColumn";
+            this.wIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sTIDDataGridViewTextBoxColumn
             // 
             this.sTIDDataGridViewTextBoxColumn.DataPropertyName = "ST_ID";
-            this.sTIDDataGridViewTextBoxColumn.HeaderText = "ST_ID";
+            this.sTIDDataGridViewTextBoxColumn.HeaderText = "재고번호";
             this.sTIDDataGridViewTextBoxColumn.Name = "sTIDDataGridViewTextBoxColumn";
             this.sTIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridView8
+            // rEFDATEDataGridViewTextBoxColumn
             // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(16, 197);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.RowTemplate.Height = 23;
-            this.dataGridView8.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView8.TabIndex = 25;
+            this.rEFDATEDataGridViewTextBoxColumn.DataPropertyName = "REF_DATE";
+            this.rEFDATEDataGridViewTextBoxColumn.HeaderText = "날짜";
+            this.rEFDATEDataGridViewTextBoxColumn.Name = "rEFDATEDataGridViewTextBoxColumn";
+            this.rEFDATEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridView9
+            // button12
             // 
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(39, 116);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.RowTemplate.Height = 23;
-            this.dataGridView9.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView9.TabIndex = 26;
+            this.button12.Location = new System.Drawing.Point(115, 25);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 1;
+            this.button12.Text = "로그아웃";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Managertab
             // 
@@ -1470,6 +1471,7 @@ namespace Market_final_exam
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1083, 450);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.metroTabControl1);
             this.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Managertab";
@@ -1486,23 +1488,24 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEGISTERBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rcdata1BindingSource)).EndInit();
+            this.metroTabPage5.ResumeLayout(false);
+            this.metroTabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managef)).EndInit();
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODCHANGEBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.managef)).EndInit();
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).EndInit();
-            this.metroTabPage5.ResumeLayout(false);
-            this.metroTabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.register12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDMINISTRATORBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource2)).EndInit();
@@ -1511,9 +1514,6 @@ namespace Market_final_exam
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEGISTERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEFUNDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1620,15 +1620,6 @@ namespace Market_final_exam
         private System.Windows.Forms.TextBox textBox7;
         private MetroFramework.Controls.MetroLabel metroLabel24;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private MetroFramework.Controls.MetroLabel metroLabel26;
         private System.Windows.Forms.DataGridViewTextBoxColumn pDIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pDNAMEDataGridViewTextBoxColumn;
@@ -1642,19 +1633,28 @@ namespace Market_final_exam
         private System.Windows.Forms.DataGridViewTextBoxColumn pDSERIALDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn sTREMAINDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.BindingSource rEFUNDBindingSource;
+        private MetroFramework.Controls.MetroLabel metroLabel27;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn rEFIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn rEFSTATEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rEFPRICEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rEFDATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pUQUANTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pDDETAILDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sTIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource rEFUNDBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rEFDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Button button12;
     }
 }

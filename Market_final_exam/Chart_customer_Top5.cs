@@ -62,7 +62,7 @@ namespace Market_final_exam
         private void add_data_st_ch()
         {
 
-            oracleCommand1.CommandText = "SELECT CUSTOMER.C_NAME as 고객명, SUM(purchase.p_price) as 고객매출 FROM CUSTOMER, PURCHASE WHERE CUSTOMER.C_ID = purchase.c_id AND ROWNUM <= 7 GROUP BY CUSTOMER.C_NAME";
+            oracleCommand1.CommandText = "SELECT CUSTOMER.C_NAME as 고객명, SUM(purchase.p_price) as 고객매출 FROM CUSTOMER, PURCHASE WHERE CUSTOMER.C_ID = purchase.c_id GROUP BY CUSTOMER.C_NAME";
 
             OracleDataReader rdr = oracleCommand1.ExecuteReader();
 

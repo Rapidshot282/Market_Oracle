@@ -56,7 +56,7 @@ namespace Market_final_exam
         private void add_data_st_ch()
         {
 
-            oracleCommand1.CommandText = "SELECT MARKET.M_NAME as 마트명, SUM(purchase.p_price) as 마트매출 FROM MARKET, PURCHASE WHERE MARKET.M_ID = purchase.m_id AND ROWNUM <= 7 GROUP BY market.m_name";
+            oracleCommand1.CommandText = "SELECT MARKET.M_NAME as 마트명, SUM(purchase.p_price) as 마트매출 FROM MARKET, PURCHASE WHERE MARKET.M_ID = purchase.m_id GROUP BY market.m_name";
 
             OracleDataReader rdr = oracleCommand1.ExecuteReader();
 

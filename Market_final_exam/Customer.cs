@@ -582,6 +582,21 @@ namespace Market_final_exam
             label9.Text = pr_bf_price.ToString() + "원" + " ----> " + pr_af_price.ToString() + "원";
             label10.Text = pr_pd_serial.ToString();
         }
-        
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("로그아웃 하시겠습니까?", "쑤야유통 로그인서비스", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MessageBox.Show("로그아웃 되었습니다.", "쑤야유통 로그인서비스", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Login showForm_1 = new Login();
+                this.Hide();
+                showForm_1.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("로그아웃이 취소되었습니다.", "쑤야유통 로그인서비스", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
