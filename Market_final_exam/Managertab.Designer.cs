@@ -30,7 +30,7 @@ namespace Market_final_exam
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.people11 = new Market_final_exam.people1();
             this.administratorTableAdapter1 = new Market_final_exam.people1TableAdapters.ADMINISTRATORTableAdapter();
             this.workerTableAdapter1 = new Market_final_exam.people1TableAdapters.WORKERTableAdapter();
@@ -56,11 +56,6 @@ namespace Market_final_exam
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pRCHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pDSERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRODCHANGEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.managef = new Market_final_exam.Managef();
             this.button2 = new System.Windows.Forms.Button();
@@ -79,8 +74,6 @@ namespace Market_final_exam
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.pDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pDNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button10 = new System.Windows.Forms.Button();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
@@ -150,6 +143,13 @@ namespace Market_final_exam
             this.replyTableAdapter1 = new Market_final_exam.ManagefTableAdapters.REPLYTableAdapter();
             this.stockTableAdapter1 = new Market_final_exam.ManagefTableAdapters.STOCKTableAdapter();
             this.mARKETBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRCHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aFPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pDSERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.people11)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage6.SuspendLayout();
@@ -204,7 +204,7 @@ namespace Market_final_exam
             this.metroTabControl1.Location = new System.Drawing.Point(12, 53);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 4;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1058, 374);
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -418,7 +418,7 @@ namespace Market_final_exam
             // 
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel15.Location = new System.Drawing.Point(740, 48);
+            this.metroLabel15.Location = new System.Drawing.Point(693, 48);
             this.metroLabel15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(97, 19);
@@ -438,47 +438,13 @@ namespace Market_final_exam
             this.mIDDataGridViewTextBoxColumn,
             this.pDSERIALDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pRODCHANGEBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(740, 70);
+            this.dataGridView1.Location = new System.Drawing.Point(699, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(303, 224);
+            this.dataGridView1.Size = new System.Drawing.Size(344, 224);
             this.dataGridView1.TabIndex = 12;
-            // 
-            // pRCHIDDataGridViewTextBoxColumn
-            // 
-            this.pRCHIDDataGridViewTextBoxColumn.DataPropertyName = "PRCH_ID";
-            this.pRCHIDDataGridViewTextBoxColumn.HeaderText = "PRCH_ID";
-            this.pRCHIDDataGridViewTextBoxColumn.Name = "pRCHIDDataGridViewTextBoxColumn";
-            this.pRCHIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bFPRICEDataGridViewTextBoxColumn
-            // 
-            this.bFPRICEDataGridViewTextBoxColumn.DataPropertyName = "BF_PRICE";
-            this.bFPRICEDataGridViewTextBoxColumn.HeaderText = "BF_PRICE";
-            this.bFPRICEDataGridViewTextBoxColumn.Name = "bFPRICEDataGridViewTextBoxColumn";
-            this.bFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aFPRICEDataGridViewTextBoxColumn
-            // 
-            this.aFPRICEDataGridViewTextBoxColumn.DataPropertyName = "AF_PRICE";
-            this.aFPRICEDataGridViewTextBoxColumn.HeaderText = "AF_PRICE";
-            this.aFPRICEDataGridViewTextBoxColumn.Name = "aFPRICEDataGridViewTextBoxColumn";
-            this.aFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mIDDataGridViewTextBoxColumn
-            // 
-            this.mIDDataGridViewTextBoxColumn.DataPropertyName = "M_ID";
-            this.mIDDataGridViewTextBoxColumn.HeaderText = "M_ID";
-            this.mIDDataGridViewTextBoxColumn.Name = "mIDDataGridViewTextBoxColumn";
-            this.mIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pDSERIALDataGridViewTextBoxColumn
-            // 
-            this.pDSERIALDataGridViewTextBoxColumn.DataPropertyName = "PD_SERIAL";
-            this.pDSERIALDataGridViewTextBoxColumn.HeaderText = "PD_SERIAL";
-            this.pDSERIALDataGridViewTextBoxColumn.Name = "pDSERIALDataGridViewTextBoxColumn";
-            this.pDSERIALDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // pRODCHANGEBindingSource
             // 
@@ -493,7 +459,7 @@ namespace Market_final_exam
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(525, 258);
+            this.button2.Location = new System.Drawing.Point(491, 258);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(194, 38);
@@ -506,7 +472,7 @@ namespace Market_final_exam
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(521, 158);
+            this.metroLabel5.Location = new System.Drawing.Point(487, 158);
             this.metroLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(83, 19);
@@ -517,7 +483,7 @@ namespace Market_final_exam
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(521, 94);
+            this.metroLabel4.Location = new System.Drawing.Point(487, 94);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(65, 19);
@@ -528,7 +494,7 @@ namespace Market_final_exam
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(519, 48);
+            this.metroLabel3.Location = new System.Drawing.Point(485, 48);
             this.metroLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(179, 19);
@@ -537,7 +503,7 @@ namespace Market_final_exam
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(525, 183);
+            this.textBox2.Location = new System.Drawing.Point(491, 183);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(196, 21);
@@ -545,7 +511,7 @@ namespace Market_final_exam
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(525, 116);
+            this.textBox1.Location = new System.Drawing.Point(491, 116);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -556,7 +522,7 @@ namespace Market_final_exam
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(283, 48);
+            this.metroLabel2.Location = new System.Drawing.Point(270, 48);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(65, 19);
@@ -568,7 +534,7 @@ namespace Market_final_exam
             this.listBox2.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(284, 70);
+            this.listBox2.Location = new System.Drawing.Point(271, 70);
             this.listBox2.Margin = new System.Windows.Forms.Padding(2);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(193, 224);
@@ -627,7 +593,7 @@ namespace Market_final_exam
             // 
             this.metroLabel25.AutoSize = true;
             this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel25.Location = new System.Drawing.Point(521, 80);
+            this.metroLabel25.Location = new System.Drawing.Point(540, 80);
             this.metroLabel25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel25.Name = "metroLabel25";
             this.metroLabel25.Size = new System.Drawing.Size(97, 19);
@@ -636,7 +602,7 @@ namespace Market_final_exam
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(525, 102);
+            this.textBox7.Location = new System.Drawing.Point(544, 102);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(196, 21);
@@ -657,12 +623,12 @@ namespace Market_final_exam
             // 
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel18.Location = new System.Drawing.Point(740, 48);
+            this.metroLabel18.Location = new System.Drawing.Point(798, 48);
             this.metroLabel18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(125, 19);
             this.metroLabel18.TabIndex = 35;
-            this.metroLabel18.Text = "물품등록코드 조회";
+            this.metroLabel18.Text = "물품그룹번호 조회";
             // 
             // dataGridView7
             // 
@@ -674,26 +640,13 @@ namespace Market_final_exam
             this.pDIDDataGridViewTextBoxColumn,
             this.pDNAMEDataGridViewTextBoxColumn});
             this.dataGridView7.DataSource = this.pRODUCTBindingSource;
-            this.dataGridView7.Location = new System.Drawing.Point(740, 70);
+            this.dataGridView7.Location = new System.Drawing.Point(798, 70);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.ReadOnly = true;
+            this.dataGridView7.RowHeadersVisible = false;
             this.dataGridView7.RowTemplate.Height = 23;
-            this.dataGridView7.Size = new System.Drawing.Size(285, 226);
+            this.dataGridView7.Size = new System.Drawing.Size(227, 226);
             this.dataGridView7.TabIndex = 34;
-            // 
-            // pDIDDataGridViewTextBoxColumn
-            // 
-            this.pDIDDataGridViewTextBoxColumn.DataPropertyName = "PD_ID";
-            this.pDIDDataGridViewTextBoxColumn.HeaderText = "PD_ID";
-            this.pDIDDataGridViewTextBoxColumn.Name = "pDIDDataGridViewTextBoxColumn";
-            this.pDIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pDNAMEDataGridViewTextBoxColumn
-            // 
-            this.pDNAMEDataGridViewTextBoxColumn.DataPropertyName = "PD_NAME";
-            this.pDNAMEDataGridViewTextBoxColumn.HeaderText = "PD_NAME";
-            this.pDNAMEDataGridViewTextBoxColumn.Name = "pDNAMEDataGridViewTextBoxColumn";
-            this.pDNAMEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // pRODUCTBindingSource
             // 
@@ -703,7 +656,7 @@ namespace Market_final_exam
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("MS UI Gothic", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(525, 258);
+            this.button10.Location = new System.Drawing.Point(544, 258);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(194, 38);
@@ -716,7 +669,7 @@ namespace Market_final_exam
             // 
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel19.Location = new System.Drawing.Point(521, 196);
+            this.metroLabel19.Location = new System.Drawing.Point(540, 196);
             this.metroLabel19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel19.Name = "metroLabel19";
             this.metroLabel19.Size = new System.Drawing.Size(97, 19);
@@ -727,7 +680,7 @@ namespace Market_final_exam
             // 
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel20.Location = new System.Drawing.Point(521, 137);
+            this.metroLabel20.Location = new System.Drawing.Point(540, 137);
             this.metroLabel20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel20.Name = "metroLabel20";
             this.metroLabel20.Size = new System.Drawing.Size(97, 19);
@@ -738,7 +691,7 @@ namespace Market_final_exam
             // 
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel21.Location = new System.Drawing.Point(519, 48);
+            this.metroLabel21.Location = new System.Drawing.Point(538, 48);
             this.metroLabel21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel21.Name = "metroLabel21";
             this.metroLabel21.Size = new System.Drawing.Size(97, 19);
@@ -747,7 +700,7 @@ namespace Market_final_exam
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(525, 221);
+            this.textBox5.Location = new System.Drawing.Point(544, 221);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(196, 21);
@@ -755,7 +708,7 @@ namespace Market_final_exam
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(525, 159);
+            this.textBox6.Location = new System.Drawing.Point(544, 159);
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(196, 21);
@@ -832,7 +785,7 @@ namespace Market_final_exam
             // 
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel17.Location = new System.Drawing.Point(740, 48);
+            this.metroLabel17.Location = new System.Drawing.Point(758, 48);
             this.metroLabel17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(97, 19);
@@ -850,11 +803,12 @@ namespace Market_final_exam
             this.pDSERIALDataGridViewTextBoxColumn3,
             this.sTREMAINDataGridViewTextBoxColumn1});
             this.dataGridView6.DataSource = this.sTOCKBindingSource;
-            this.dataGridView6.Location = new System.Drawing.Point(740, 70);
+            this.dataGridView6.Location = new System.Drawing.Point(758, 70);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.ReadOnly = true;
+            this.dataGridView6.RowHeadersVisible = false;
             this.dataGridView6.RowTemplate.Height = 23;
-            this.dataGridView6.Size = new System.Drawing.Size(285, 226);
+            this.dataGridView6.Size = new System.Drawing.Size(267, 226);
             this.dataGridView6.TabIndex = 22;
             // 
             // mIDDataGridViewTextBoxColumn5
@@ -1038,6 +992,7 @@ namespace Market_final_exam
             this.dataGridView5.Location = new System.Drawing.Point(18, 41);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.RowHeadersVisible = false;
             this.dataGridView5.RowTemplate.Height = 23;
             this.dataGridView5.Size = new System.Drawing.Size(525, 290);
             this.dataGridView5.TabIndex = 24;
@@ -1101,9 +1056,9 @@ namespace Market_final_exam
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "P_DATE";
-            dataGridViewCellStyle2.Format = "D";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "D";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn9.HeaderText = "날짜";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -1293,6 +1248,61 @@ namespace Market_final_exam
             this.mARKETBindingSource.DataMember = "MARKET";
             this.mARKETBindingSource.DataSource = this.managef1;
             // 
+            // pDIDDataGridViewTextBoxColumn
+            // 
+            this.pDIDDataGridViewTextBoxColumn.DataPropertyName = "PD_ID";
+            this.pDIDDataGridViewTextBoxColumn.HeaderText = "물품그룹번호";
+            this.pDIDDataGridViewTextBoxColumn.Name = "pDIDDataGridViewTextBoxColumn";
+            this.pDIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pDNAMEDataGridViewTextBoxColumn
+            // 
+            this.pDNAMEDataGridViewTextBoxColumn.DataPropertyName = "PD_NAME";
+            this.pDNAMEDataGridViewTextBoxColumn.HeaderText = "물품그룹명";
+            this.pDNAMEDataGridViewTextBoxColumn.Name = "pDNAMEDataGridViewTextBoxColumn";
+            this.pDNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pRCHIDDataGridViewTextBoxColumn
+            // 
+            this.pRCHIDDataGridViewTextBoxColumn.DataPropertyName = "PRCH_ID";
+            this.pRCHIDDataGridViewTextBoxColumn.HeaderText = "변경순서";
+            this.pRCHIDDataGridViewTextBoxColumn.Name = "pRCHIDDataGridViewTextBoxColumn";
+            this.pRCHIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pRCHIDDataGridViewTextBoxColumn.Visible = false;
+            this.pRCHIDDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // bFPRICEDataGridViewTextBoxColumn
+            // 
+            this.bFPRICEDataGridViewTextBoxColumn.DataPropertyName = "BF_PRICE";
+            this.bFPRICEDataGridViewTextBoxColumn.HeaderText = "이전가격";
+            this.bFPRICEDataGridViewTextBoxColumn.Name = "bFPRICEDataGridViewTextBoxColumn";
+            this.bFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bFPRICEDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // aFPRICEDataGridViewTextBoxColumn
+            // 
+            this.aFPRICEDataGridViewTextBoxColumn.DataPropertyName = "AF_PRICE";
+            this.aFPRICEDataGridViewTextBoxColumn.HeaderText = "변동가격";
+            this.aFPRICEDataGridViewTextBoxColumn.Name = "aFPRICEDataGridViewTextBoxColumn";
+            this.aFPRICEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aFPRICEDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // mIDDataGridViewTextBoxColumn
+            // 
+            this.mIDDataGridViewTextBoxColumn.DataPropertyName = "M_ID";
+            this.mIDDataGridViewTextBoxColumn.HeaderText = "마트번호";
+            this.mIDDataGridViewTextBoxColumn.Name = "mIDDataGridViewTextBoxColumn";
+            this.mIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mIDDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // pDSERIALDataGridViewTextBoxColumn
+            // 
+            this.pDSERIALDataGridViewTextBoxColumn.DataPropertyName = "PD_SERIAL";
+            this.pDSERIALDataGridViewTextBoxColumn.HeaderText = "등록코드";
+            this.pDSERIALDataGridViewTextBoxColumn.Name = "pDSERIALDataGridViewTextBoxColumn";
+            this.pDSERIALDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pDSERIALDataGridViewTextBoxColumn.Width = 80;
+            // 
             // Managertab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1402,11 +1412,6 @@ namespace Market_final_exam
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pRCHIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bFPRICEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aFPRICEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pDSERIALDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource pRODCHANGEBindingSource;
         private Oracle.ManagedDataAccess.Client.OracleConnection oracleConnection1;
         private Oracle.ManagedDataAccess.Client.OracleCommand oracleCommand1;
@@ -1434,8 +1439,6 @@ namespace Market_final_exam
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
         private MetroFramework.Controls.MetroLabel metroLabel18;
         private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pDIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pDNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource pRODUCTBindingSource;
         private System.Windows.Forms.Button button10;
         private MetroFramework.Controls.MetroLabel metroLabel19;
@@ -1465,5 +1468,12 @@ namespace Market_final_exam
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private MetroFramework.Controls.MetroLabel metroLabel26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pDIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pDNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRCHIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bFPRICEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aFPRICEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pDSERIALDataGridViewTextBoxColumn;
     }
 }
