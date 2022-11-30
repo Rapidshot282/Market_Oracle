@@ -74,7 +74,7 @@ namespace Market_final_exam
             this.Controls.Add(this.button1);
             this.Controls.Add(this.metroLabel17);
             this.Name = "Chart_market_Top5";
-            this.Text = "Chart_market_Top5";
+            this.Text = "판매현황(마트별)";
             this.Load += new System.EventHandler(this.Chart_market_Top5_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

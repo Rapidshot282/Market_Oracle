@@ -152,7 +152,7 @@ namespace Market_final_exam
             this.Controls.Add(this.button1);
             this.Controls.Add(this.metroLabel17);
             this.Name = "Chart_total_refund";
-            this.Text = "Chart_total_refund";
+            this.Text = "날짜별 환불현황";
             this.Load += new System.EventHandler(this.Chart_total_refund_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

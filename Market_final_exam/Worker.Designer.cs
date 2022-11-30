@@ -142,7 +142,7 @@ namespace Market_final_exam
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1017, 502);
             this.metroTabControl1.TabIndex = 0;
             // 
@@ -935,7 +935,7 @@ namespace Market_final_exam
             this.ClientSize = new System.Drawing.Size(1058, 584);
             this.Controls.Add(this.metroTabControl1);
             this.Name = "Worker";
-            this.Text = "Worker";
+            this.Text = "쑤야유통";
             this.Load += new System.EventHandler(this.Worker_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);

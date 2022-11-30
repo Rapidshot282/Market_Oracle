@@ -22,8 +22,22 @@ namespace Market_final_exam
 
         public static string pd_serial_ch;
 
+        public static DataTable pd_detail;
+
         private void Chart_stock_Load(object sender, EventArgs e)
         {
+            // TODO: 이 코드는 데이터를 'managef.PD_DETAIL' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
+            this.pD_DETAILTableAdapter.Fill(this.managef.PD_DETAIL);
+            pd_detail = managef.Tables["PD_DETAIL"];
+            // TODO: 이 코드는 데이터를 'managef.STOCK' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
+            this.sTOCKTableAdapter.Fill(this.managef.STOCK);
+
+            listBox1.Items.Clear();
+            foreach (DataRow row in pd_detail.Rows)
+            {
+                listBox1.Items.Add(row["PD_SERIAL"].ToString());
+            }
+
             oracleConnection1.Open();
         }
 
@@ -71,10 +85,7 @@ namespace Market_final_exam
             oracleConnection1.Close();
             
         }
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            pd_serial_ch = comboBox3.SelectedItem.ToString();
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -88,6 +99,11 @@ namespace Market_final_exam
             this.Close();
             Chart_stock showFrom9 = new Chart_stock();
             showFrom9.ShowDialog();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pd_serial_ch = listBox1.SelectedItem.ToString();
         }
     }
 }

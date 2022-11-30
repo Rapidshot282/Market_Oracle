@@ -39,11 +39,23 @@ namespace Market_final_exam
         public static string st_id_m;
         public static string m_id;
 
+        public static string m_id_st;
+        public static string serial_st;
+        public static string st_id_st;
+        public static string ch_stock;
+
+        public static string m_id_new;
+        public static string pd_id_new;
+        public static string serial_new;
+        public static string st_id_new;
+        public static string new_stock;
+
         public static string pd_serial_ch;
         private void Managertab_Load(object sender, EventArgs e)
         {
             // TODO: 이 코드는 데이터를 'managef.STOCK' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.stockTableAdapter1.Fill(this.managef.STOCK);
+            this.productTableAdapter1.Fill(this.managef.PRODUCT);
 
             this.registerTableAdapter1.Fill(this.rcdata1.REGISTER);
 
@@ -58,6 +70,12 @@ namespace Market_final_exam
 
             proD_CHANGETableAdapter1.Fill(managef1.PROD_CHANGE);
             prod_change = managef1.Tables["PROD_CHANGE"];
+
+            productTableAdapter1.Fill(managef1.PRODUCT);
+            product = managef1.Tables["PRODUCT"];
+
+            pD_DETAILTableAdapter1.Fill(managef1.PD_DETAIL);
+            pd_detail = managef1.Tables["PD_DETAIL"];
 
             administratorTableAdapter1.Fill(people11.ADMINISTRATOR);
             admin = people11.Tables["ADMINISTRATOR"];
@@ -77,6 +95,25 @@ namespace Market_final_exam
             {
                 listBox1.Items.Add(row["M_ID"].ToString());
             }
+
+            listBox4.Items.Clear();
+            foreach (DataRow row_1 in market.Rows)
+            {
+                listBox4.Items.Add(row_1["M_ID"].ToString());
+            }
+
+            listBox6.Items.Clear();
+            foreach (DataRow row_2 in market.Rows)
+            {
+                listBox6.Items.Add(row_2["M_ID"].ToString());
+            }
+
+            listBox5.Items.Clear();
+            foreach (DataRow row_2 in product.Rows)
+            {
+                listBox5.Items.Add(row_2["PD_ID"].ToString());
+            }
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -268,6 +305,110 @@ namespace Market_final_exam
             Chart_total_refund showFrom14 = new Chart_total_refund();
 
             showFrom14.ShowDialog();
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            m_id_st = listBox4.SelectedItem.ToString();
+
+            DataRow[] selected;
+
+            listBox3.Items.Clear();
+
+            selected = managef1.STOCK.Select("M_ID = " + m_id_st);
+
+            foreach (DataRow row in selected)
+            {
+                listBox3.Items.Add(row["PD_SERIAL"].ToString());
+            }
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            serial_st = listBox3.SelectedItem.ToString();
+
+            DataRow[] selected;
+
+            selected = managef1.STOCK.Select("M_ID = " + m_id_st + " AND PD_SERIAL = " + serial_st);
+
+            foreach (DataRow row in selected)
+            {
+                textBox4.Text = row["ST_REMAIN"].ToString();
+                st_id_st = row["ST_ID"].ToString();
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("상품 입고사항을 저장하시겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DataRow[] selected;
+
+                selected = managef1.STOCK.Select("ST_ID = " + st_id_st);
+
+                foreach (DataRow row in selected)
+                {
+                    row["ST_REMAIN"] = textBox3.Text.ToString();
+                }
+
+                stockTableAdapter1.Update(managef1.STOCK);
+                stockTableAdapter1.Fill(managef1.STOCK);
+
+                MessageBox.Show("변동사항이 저장되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                MessageBox.Show("변동사항 저장이 취소되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void listBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_id_new = listBox6.SelectedItem.ToString();
+
+        }
+
+        private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pd_id_new = listBox5.SelectedItem.ToString();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("신규상품 입고사항을 저장하시겠습니까?", "쑤야유통", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int pd_serial_new;
+                pd_serial_new = (int)pD_DETAILTableAdapter1.pd_detail_serial();
+
+                DataRow newRow = pd_detail.NewRow();
+                newRow["PD_SERIAL"] = pd_serial_new;
+                newRow["PD_ID"] = pd_id_new;
+                newRow["PD_NAME"] = textBox7.Text;
+
+                pd_detail.Rows.Add(newRow);
+
+                pD_DETAILTableAdapter1.Update(managef1.PD_DETAIL);
+
+                DataRow newRow_1 = stock.NewRow();
+                newRow_1["ST_ID"] = (int)stockTableAdapter1.new_stock_id();
+                newRow_1["ST_REMAIN"] = textBox5.Text;
+                newRow_1["M_PRICE"] = textBox6.Text;
+                newRow_1["M_ID"] = m_id_new;
+                newRow_1["PD_SERIAL"] = pd_serial_new;
+
+                stock.Rows.Add(newRow_1);
+
+                stockTableAdapter1.Update(managef1.STOCK);
+                stockTableAdapter1.Fill(managef1.STOCK);
+
+                MessageBox.Show("신규상품이 입고되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                MessageBox.Show("신규상품 입고가 취소되었습니다.", "쑤야유통", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

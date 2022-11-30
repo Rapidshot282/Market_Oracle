@@ -1291,7 +1291,7 @@ namespace Market_final_exam
             this.Controls.Add(this.label1);
             this.Name = "Customer";
             this.Padding = new System.Windows.Forms.Padding(11, 60, 11, 10);
-            this.Text = "Customer";
+            this.Text = "쑤야유통";
             this.Load += new System.EventHandler(this.Customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.people11)).EndInit();
             this.metroTabControl1.ResumeLayout(false);

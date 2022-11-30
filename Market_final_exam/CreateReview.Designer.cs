@@ -141,7 +141,7 @@ namespace Market_final_exam
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Name = "CreateReview";
-            this.Text = "CreateReview";
+            this.Text = "리뷰작성";
             this.Load += new System.EventHandler(this.CreateReview_Load);
             ((System.ComponentModel.ISupportInitialize)(this.managef1)).EndInit();
             this.ResumeLayout(false);

@@ -47,7 +47,6 @@ namespace Market_final_exam
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.mARKETBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.managef = new Market_final_exam.Managef();
-            this.label2 = new System.Windows.Forms.Label();
             this.mARKETTableAdapter = new Market_final_exam.ManagefTableAdapters.MARKETTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
@@ -81,7 +80,7 @@ namespace Market_final_exam
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(106, 137);
+            this.textBox1.Location = new System.Drawing.Point(106, 101);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(103, 23);
             this.textBox1.TabIndex = 0;
@@ -89,7 +88,7 @@ namespace Market_final_exam
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(81, 103);
+            this.metroLabel1.Location = new System.Drawing.Point(81, 67);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(157, 19);
             this.metroLabel1.TabIndex = 3;
@@ -98,7 +97,7 @@ namespace Market_final_exam
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(35, 141);
+            this.metroLabel2.Location = new System.Drawing.Point(35, 105);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(51, 19);
             this.metroLabel2.TabIndex = 4;
@@ -107,7 +106,7 @@ namespace Market_final_exam
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(35, 260);
+            this.metroLabel3.Location = new System.Drawing.Point(35, 224);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(65, 19);
             this.metroLabel3.TabIndex = 5;
@@ -116,7 +115,7 @@ namespace Market_final_exam
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(35, 227);
+            this.metroLabel4.Location = new System.Drawing.Point(35, 191);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(65, 19);
             this.metroLabel4.TabIndex = 6;
@@ -124,7 +123,7 @@ namespace Market_final_exam
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(90, 302);
+            this.button1.Location = new System.Drawing.Point(90, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 40);
             this.button1.TabIndex = 7;
@@ -145,7 +144,7 @@ namespace Market_final_exam
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(106, 260);
+            this.textBox2.Location = new System.Drawing.Point(106, 224);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(175, 23);
             this.textBox2.TabIndex = 1;
@@ -153,7 +152,7 @@ namespace Market_final_exam
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(35, 195);
+            this.metroLabel5.Location = new System.Drawing.Point(35, 159);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(37, 19);
             this.metroLabel5.TabIndex = 9;
@@ -168,7 +167,7 @@ namespace Market_final_exam
             "고객",
             "직원",
             "관리자"});
-            this.comboBox1.Location = new System.Drawing.Point(106, 227);
+            this.comboBox1.Location = new System.Drawing.Point(106, 191);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 27);
             this.comboBox1.TabIndex = 10;
@@ -184,7 +183,7 @@ namespace Market_final_exam
             "쑤야유통 부산서면점",
             "쑤야유통 부산남포점",
             "쑤야유통 창원상남점"});
-            this.comboBox2.Location = new System.Drawing.Point(106, 195);
+            this.comboBox2.Location = new System.Drawing.Point(106, 159);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(175, 27);
             this.comboBox2.TabIndex = 11;
@@ -199,23 +198,13 @@ namespace Market_final_exam
             this.managef.DataSetName = "Managef";
             this.managef.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 33);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "회원가입";
-            // 
             // mARKETTableAdapter
             // 
             this.mARKETTableAdapter.ClearBeforeFill = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(215, 137);
+            this.button2.Location = new System.Drawing.Point(215, 101);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 23);
             this.button2.TabIndex = 13;
@@ -226,7 +215,7 @@ namespace Market_final_exam
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(35, 167);
+            this.metroLabel6.Location = new System.Drawing.Point(35, 131);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(37, 19);
             this.metroLabel6.TabIndex = 15;
@@ -235,7 +224,7 @@ namespace Market_final_exam
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(106, 167);
+            this.textBox3.Location = new System.Drawing.Point(106, 131);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(175, 23);
             this.textBox3.TabIndex = 14;
@@ -257,11 +246,10 @@ namespace Market_final_exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 384);
+            this.ClientSize = new System.Drawing.Size(316, 340);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.metroLabel5);
@@ -274,7 +262,7 @@ namespace Market_final_exam
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Register";
-            this.Text = "Register";
+            this.Text = "회원가입";
             this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.people11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mARKETBindingSource)).EndInit();
@@ -302,7 +290,6 @@ namespace Market_final_exam
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
         private Managef managef;
         private System.Windows.Forms.BindingSource mARKETBindingSource;
         private ManagefTableAdapters.MARKETTableAdapter mARKETTableAdapter;

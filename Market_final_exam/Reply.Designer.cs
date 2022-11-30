@@ -118,7 +118,7 @@ namespace Market_final_exam
             this.Controls.Add(this.label5);
             this.Controls.Add(this.listBox1);
             this.Name = "Reply";
-            this.Text = "reply";
+            this.Text = "리뷰조회";
             this.Load += new System.EventHandler(this.reply_Load);
             ((System.ComponentModel.ISupportInitialize)(this.managef1)).EndInit();
             this.ResumeLayout(false);

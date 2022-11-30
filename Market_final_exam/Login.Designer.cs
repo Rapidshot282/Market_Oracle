@@ -141,7 +141,7 @@ namespace Market_final_exam
             this.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Login";
             this.Padding = new System.Windows.Forms.Padding(18, 60, 18, 20);
-            this.Text = "login";
+            this.Text = "로그인";
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.people11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rcdata1)).EndInit();
