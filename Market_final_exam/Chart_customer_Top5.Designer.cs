@@ -37,9 +37,10 @@ namespace Market_final_exam
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(172, 73);
+            this.button1.Location = new System.Drawing.Point(319, 146);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 20);
+            this.button1.Size = new System.Drawing.Size(139, 40);
             this.button1.TabIndex = 22;
             this.button1.Text = "조회";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,11 +49,12 @@ namespace Market_final_exam
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(23, 74);
+            this.metroLabel17.Location = new System.Drawing.Point(43, 148);
+            this.metroLabel17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(143, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(148, 19);
             this.metroLabel17.TabIndex = 21;
-            this.metroLabel17.Text = "현재까지의 고객 매출";
+            this.metroLabel17.Text = "현재까지의 고객 매출1";
             // 
             // oracleConnection1
             // 
@@ -67,13 +69,15 @@ namespace Market_final_exam
             // 
             // Chart_customer_Top5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(639, 444);
+            this.ClientSize = new System.Drawing.Size(1187, 888);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.metroLabel17);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Chart_customer_Top5";
+            this.Padding = new System.Windows.Forms.Padding(37, 120, 37, 40);
             this.Text = "판매현황(고객)";
             this.Load += new System.EventHandler(this.Chart_customer_Top5_Load);
             this.ResumeLayout(false);
